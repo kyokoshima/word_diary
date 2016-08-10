@@ -51,3 +51,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # react
 gem 'react_on_rails'
+
+gem 'therubyracer', platforms: :ruby
