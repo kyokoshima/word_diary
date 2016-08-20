@@ -53,3 +53,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'react_on_rails'
 
 gem 'therubyracer', platforms: :ruby
+gem 'haml-rails'
+gem 'normalize-rails'
