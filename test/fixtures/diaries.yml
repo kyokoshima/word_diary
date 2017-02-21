@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  word: MyString
+  weather: MyString
+  temperature: 9.99
+
+two:
+  word: MyString
+  weather: MyString
+  temperature: 9.99

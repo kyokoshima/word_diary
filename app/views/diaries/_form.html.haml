@@ -1,0 +1,36 @@
+- if @diary.errors.any?
+  %p#error(style="display: none;") 【Input Error】Please check the input.
+= render :preview, diary: @diary
+= simple_form_for @diary do |f|
+  .row
+    .col.s10.offset-s1
+      = f.input :word, class: 'input-field', error: { class: 'invaid' }, label_html: { 'data-error': 'wrong' }
+      = f.input :image, as: :file, label: "<i class='material-icons'>file_upload</i>".html_safe
+      .row
+        .col.s4
+          %label Temperature
+          .switch
+            %label
+              = f.check_box :show_temp
+              %span.lever
+        .col.s4
+          %label Weather
+          .switch
+            %label
+              = f.check_box :show_weather
+              %span.lever
+        .col.s4
+          %label Date
+          .switch
+            %label
+              = f.check_box :show_date
+              %span.lever
+      .row
+        .col.s4
+          = f.hidden_field :temperature
+          = f.hidden_field :weather
+          = f.hidden_field :post_date
+          %button.btn.waves-effect.waves-light(type="submit")
+            Submit
+            %i.material-icons.right send
+  

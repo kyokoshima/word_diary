@@ -1,0 +1,23 @@
+version: '2'
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/word_diary
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    volumes_from:
+      - container:web-sync:rw
+      - bundle
+  bundle:
+    image: worddiary_web
+    volumes:
+      - /bundle
+volumes:
+  web-sync:
+    external: true

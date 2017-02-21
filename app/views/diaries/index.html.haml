@@ -1,0 +1,28 @@
+%p#notice= notice
+%h1 Diaries
+.row
+  - @diaries.each do | diary |
+    .col.s4
+      .card
+        .card-image
+          = diary_image diary
+%table
+  %thead
+    %tr
+      %th Word
+      %th Weather
+      %th Temperature
+      %th{:colspan => "3"}
+  %tbody
+    - @diaries.each do |diary|
+      %tr
+        %td= diary.word
+        %td= diary.weather
+        %td= diary.temperature
+        %td= link_to 'Show', diary
+        %td= link_to 'Edit', edit_diary_path(diary)
+        %td= link_to 'Destroy', diary, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+.fixed-action-btn
+  = link_to new_diary_path, class: ['btn-floating','btn-large','waves-effect', 'waves-light','red'] do 
+    %i.material-icons note_add
