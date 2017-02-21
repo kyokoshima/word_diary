@@ -1,6 +1,6 @@
 - if @diary.errors.any?
   %p#error(style="display: none;") 【Input Error】Please check the input.
-= render :preview, diary: @diary
+= render 'preview', diary: @diary
 = simple_form_for @diary do |f|
   .row
     .col.s10.offset-s1

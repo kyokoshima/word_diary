@@ -54,5 +54,10 @@ $ ->
   post_date = moment().format("ddd, MMM do YYYY")
   $('#preview-date').text(post_date)
   $('#diary_post_date').val(post_date)
-  Materialize.toast $('#notice').text() if $('#notice').text()
+  Materialize.toast $('#notice').text(), 3000 if $('#notice').text()
   Materialize.toast $('#error').text(), 3000 if $('#error').text()
+  $('.button-collapse').sideNav({
+      menuWidth: 200,
+      edge: 'right',
+      draggable: true
+      })
