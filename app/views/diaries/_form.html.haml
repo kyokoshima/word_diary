@@ -1,7 +1,7 @@
-- if @diary.errors.any?
+- if diary.errors.any?
   %p#error(style="display: none;") 【Input Error】Please check the input.
-= render 'preview', diary: @diary
-= simple_form_for @diary do |f|
+= render 'preview', diary: diary
+= simple_form_for diary do |f|
   .row
     .col.s10.offset-s1
       = f.input :word, class: 'input-field', error: { class: 'invaid' }, label_html: { 'data-error': 'wrong' }
@@ -30,7 +30,10 @@
           = f.hidden_field :temperature
           = f.hidden_field :weather
           = f.hidden_field :post_date
+          = f.hidden_field :place
           %button.btn.waves-effect.waves-light(type="submit")
-            Submit
-            %i.material-icons.right send
-  
+            = m_icon :send
+        .col.s4.offset-s4
+          - if diary.id.present?
+            = link_to diary_path(diary), method: :delete, class: ['btn', 'waves-effect', 'red', 'no-barba'] do
+              = m_icon :delete_forever

@@ -115,6 +115,13 @@
 	width: 8em; 
 }
 
+.col.gallery-cell {
+  padding: 0;
+  .card {
+    margin: 0;
+  }
+}
+
 .preview-container {
 	@include preview-container;
 }

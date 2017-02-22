@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require materialize-sprockets
 //= require jquery.remotipart
 //= require moment
-//= require_tree .
+//= require barba
+//= require 'greensock/TweenMax'
+//= require 'greensock/plugins/CSSPlugin'
+//= require materialize-sprockets
+//= require diaries
+
