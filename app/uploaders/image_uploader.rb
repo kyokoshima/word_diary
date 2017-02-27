@@ -1,8 +1,8 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  # include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -34,8 +34,51 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   process resize_to_fit: [50, 50]
   # end
   version :square do
-    process resize_to_fill: [500, 500]
+    #process resize_to_fill: [500, 500]
+    process do_stuff: 10.0
   end
+    def do_stuff(blur_factor)
+      resize_to_fill 500,500
+      manipulate! do |img|
+#        img = img.sepiatone
+#        img = img.auto_orient
+#        img = img.radial_blur(blur_factor)
+#        img = img.crop_resized!(500, 500, Magick::CenterGravity)
+        img.combine_options do |c|
+         # c.gravity 'Center'
+         # c.pointsize '22'
+         # c.draw "text 0,0 'test'"
+         # c.fill 'white'
+          c.gravity 'Center'
+          c.encoding "UTF-8"
+          c.pointsize '80'
+          c.font model.genshin_font_path
+          c.stretch 'UltraCondensed'
+          c.draw "text 10,10 '#{model.word}'"
+          c.weight 500
+          c.style 'Oblique'
+          c.stroke "#333333"
+          c.strokewidth 1
+          c.fill("#FFFFFF")
+          c.gravity 'SouthWest'
+          c.pointsize 20
+          c.draw "text 30,50 '#{model.place}'"
+
+          c.gravity 'SouthEast'
+          c.draw "text 30,30 '#{model.post_date}'"
+        end
+#        copyright = Magick::Draw.new
+#        my_text = "\251 NPS"
+#        copyright.annotate(img, 0, 0, 3, 18, my_text) do
+#           self.font = 'Helvetica'
+#           self.pointsize = 12
+#           self.font_weight = Magick::BoldWeight
+#           self.fill = 'white'
+#           self.gravity = Magick::SouthEastGravity
+#        end
+        img
+      end
+    end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

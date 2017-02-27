@@ -70,7 +70,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem "refile-mini_magick"
 
 gem 'carrierwave'
-gem 'rmagick'
+gem 'mini_magick'
 gem 'remotipart'
 
 # gem 'bulma-rails'

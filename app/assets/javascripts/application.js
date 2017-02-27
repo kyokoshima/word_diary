@@ -19,5 +19,6 @@
 //= require 'greensock/TweenMax'
 //= require 'greensock/plugins/CSSPlugin'
 //= require materialize-sprockets
+//= require rgbaster
 //= require diaries
 

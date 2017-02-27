@@ -4,8 +4,8 @@
 = simple_form_for diary do |f|
   .row
     .col.s10.offset-s1
-      = f.input :word, class: 'input-field', error: { class: 'invaid' }, label_html: { 'data-error': 'wrong' }
-      = f.input :image, as: :file, label: "<i class='material-icons'>file_upload</i>".html_safe
+      = f.input :word, class: 'input-field', input_html: { autocomplete: 'off'} , error: { class: 'invaid' }, label_html: { 'data-error': 'wrong' }
+      = f.input :image, as: :file, label: m_icon(:file_upload)
       .row
         .col.s4
           %label Temperature
@@ -29,8 +29,10 @@
         .col.s4
           = f.hidden_field :temperature
           = f.hidden_field :weather
+          = f.hidden_field :weather_icon
           = f.hidden_field :post_date
           = f.hidden_field :place
+          = f.hidden_field :text_color
           %button.btn.waves-effect.waves-light(type="submit")
             = m_icon :send
         .col.s4.offset-s4

@@ -1,4 +1,4 @@
-%p#notice= notice if notice.present?
+%p#notice(style="display: none;")= notice if notice.present? 
 .row
   - @diaries.each do | diary |
     .col.s4.gallery-cell

@@ -12,13 +12,11 @@
 	.place-container-inner {
 		position: relative;
 		#preview-place {
-			padding-left: 2%;
 		}
 	}
 }
 @mixin weather-container {
 	position: absolute;
-	bottom: 0%;
 	left: 10%;
 	.weather-container-inner {
 		position: relative;
@@ -29,8 +27,7 @@
 
 @mixin temp-container($font-size: 3rem) {
 	position: absolute;
-	bottom: 5%;
-	left: 25%;
+	left: 18%;
 	font-size: $font-size;
 	.temp-container-inner {
 		position: relative;
@@ -41,7 +38,6 @@
 
 @mixin date-container($font-size: 3rem) {
 	position: absolute;
-	bottom: 5%;
 	right: 10%;
 	font-size: $font-size;
 	.date-container-inner {
@@ -60,7 +56,7 @@
 		position: relative;
 		left: -50%;
 		transform: translateY(-50%);
-		border: dotted red 1px;
+		border: dashed gray 2px;
 		#preview-word {
 			white-space: nowrap;
 		}
@@ -69,6 +65,12 @@
 @mixin preview-container {
 	position: relative;
 	width: 100%;
+  color: #fff;
+  text-shadow: #333 0 0 5px;
+  font-family: 'GenShinGothic-P-Bold', sans-serif;
+  .bottom-line {
+    bottom: 5%;
+  }
 	&:before {
 		content: "";
 		display: block;
