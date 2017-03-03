@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta(name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0")
+    %meta(name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no")
     %title WordDiary
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -25,9 +25,6 @@
                 %a.right.button-collapse(data-activates="mobile-menu")
                   %i.material-icons menu
                 %ul.right.hide-in-med-and-down
-                  %li
-                    = yield(:title).presence || "Title"
-                %ul#mobile-menu.side-nav
                   %li
                     = yield(:title).presence || "Title"
         .container

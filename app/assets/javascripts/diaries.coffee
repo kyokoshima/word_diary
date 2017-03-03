@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
+ready = ->
   Barba.Pjax.start()
   Barba.Pjax.init()
   Barba.Prefetch.init()
@@ -13,6 +13,11 @@ $ ->
   getNewPageFile = -> 
     return Barba.HistoryManager.currentStatus().url.split('/').pop();
   pageInit = ->
+    $('.button-collapse').sideNav({
+        menuWidth: 100,
+        edge: 'right',
+        draggable: true
+        })
     $('#diary_word').on 'keyup', ->
       $('#preview-word').text $(this).val()
     readURL = (input) ->
@@ -35,12 +40,22 @@ $ ->
       )
     $('#diary_image').change ->
       readURL(@)
-      
-
+    $('#diary_show_temp').change ->
+      container = $('.temp-container')
+      if $(@).prop('checked') then container.show() else container.hide()
+    $('#diary_show_weather').change ->
+      container = $('.weather-container') 
+      if $(@).prop('checked') then container.show() else container.hide()
+    $('#diary_show_date').change ->
+      container = $('.date-container')
+      if $(@).prop('checked') then container.show() else container.hide()
+    $('#diary_show_location').change ->
+      container = $('.place-container')
+      if $(@).prop('checked') then container.show() else container.hide()
     Materialize.toast $('#notice').text(), 3000 if $('#notice').text()
     Materialize.toast $('#error').text(), 3000 if $('#error').text()
     Materialize.updateTextFields() if Materialize.updateTextFields
-    if getNewPageFile() != 'edit'
+    if getNewPageFile() == 'new'
       [lastLat, lastLon, lastTemp, lastIcon] = ''
       if navigator.geolocation and $('.preview-container')
         url = 'http://api.openweathermap.org/data/2.5/weather'
@@ -68,7 +83,7 @@ $ ->
             
             weather = response.weather[0]
             icon = weather.icon
-            $('#preview-weather i').addClass(weather_mappings[icon])
+            $('#preview-weather i').addClass(weather_mappings[icon]['icon'])
             $('#diary_weather').val weather.main
           .fail (xhr, status, error) ->
             console.log error
@@ -76,14 +91,10 @@ $ ->
             console.log status
         , (error) ->
           console.log error   
-      post_date = moment().format("ddd, MMM do YYYY")
+          Materialize.toast "Couldn't get your location", 3000
+      post_date = moment().format("ddd, MMM D, YYYY")
       $('#preview-date').text(post_date)
       $('#diary_post_date').val(post_date)
-  $('.button-collapse').sideNav({
-      menuWidth: 200,
-      edge: 'right',
-      draggable: true
-      })
   pageInit()
 
 
@@ -144,3 +155,6 @@ complementColor = (color) ->
   sum = max + min
   [newR, newG, newB] = [sum - r, sum-g, sum-b]
   "rgb(#{newR},#{newG},#{newB})"
+
+$(document).ready(ready)
+$(document).on 'turbolinks:load', ready

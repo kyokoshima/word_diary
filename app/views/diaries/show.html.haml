@@ -1,16 +1,20 @@
 %p#notice= notice
-%p
-  %strong Word:
-  = @diary.word
-%p
-  %strong Weather:
-  = @diary.weather
-%p
-  %strong Temperature:
-  = @diary.temperature
-%p
-  %strong Image:
-  = image_tag @diary.image.url
+.row
+  .col.s12.m8.l6
+    .card
+      .card-image
+        = diary_image @diary, clz: :materialboxed
+      .card-content
+        %p
+          %strong Word:
+          = @diary.word
+        %p
+          %strong Weather:
+          = @diary.weather
+        %p
+          %strong Temperature:
+          = @diary.temperature
+        
 = link_to 'Edit', edit_diary_path(@diary)
 |
 = link_to 'Back', diaries_path

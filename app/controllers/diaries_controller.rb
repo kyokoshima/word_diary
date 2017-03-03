@@ -69,6 +69,6 @@ class DiariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def diary_params
-      params.require(:diary).permit(:word, :weather, :temperature, :image, :post_date, :place, :show_weather, :show_temp, :show_date)
+      params.require(:diary).permit(:word, :weather, :temperature, :image, :image_cache, :post_date, :place, :show_weather, :show_temp, :show_date, :show_location, :weather_icon, :text_color)
     end
 end

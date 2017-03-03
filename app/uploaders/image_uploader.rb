@@ -35,9 +35,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
   version :square do
     #process resize_to_fill: [500, 500]
-    process do_stuff: 10.0
+    process :do_modify
   end
-    def do_stuff(blur_factor)
+    def do_modify
       resize_to_fill 500,500
       manipulate! do |img|
 #        img = img.sepiatone
@@ -54,18 +54,20 @@ class ImageUploader < CarrierWave::Uploader::Base
           c.pointsize '80'
           c.font model.genshin_font_path
           c.stretch 'UltraCondensed'
-          c.draw "text 10,10 '#{model.word}'"
-          c.weight 500
-          c.style 'Oblique'
+          c.draw "text 0,0 '#{model.word}'"
+          c.weight 'Heavy'
+          c.style 'Any'
           c.stroke "#333333"
-          c.strokewidth 1
-          c.fill("#FFFFFF")
+          c.strokewidth 0.3
           c.gravity 'SouthWest'
           c.pointsize 20
           c.draw "text 30,50 '#{model.place}'"
 
           c.gravity 'SouthEast'
           c.draw "text 30,30 '#{model.post_date}'"
+
+          
+          c.fill("#FFFFFF")
         end
 #        copyright = Magick::Draw.new
 #        my_text = "\251 NPS"
