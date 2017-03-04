@@ -2,55 +2,54 @@
   %p#error(style="display: none;") 【Input Error】Please check the input.
 = render 'preview', diary: diary
 = simple_form_for diary do |f|
+  #mobile-menu.side-nav
+    .row
+      .col.s12.center-align
+        .h3 Settings
+    .row
+      .col.s12.center-align
+        %label Location
+        .switch
+          %label
+            = f.check_box :show_location
+            %span.lever
+    .row
+      .col.s12.center-align
+        %label Weather
+        .switch
+          %label
+            = f.check_box :show_weather
+            %span.lever
+    .row
+      .col.s12.center-align
+        %label Temperature
+        .switch
+          %label
+            = f.check_box :show_temp
+            %span.lever
+    .row
+      .col.s12.center-align
+        %label Date
+        .switch
+          %label
+            = f.check_box :show_date
+            %span.lever
+    - if diary.id.present?
+      .row
+        .col.s12.center-align
+          = link_to diary_path(diary), method: :delete, class: ['btn', 'waves-effect', 'red', 'no-barba'] do
+            = m_icon :delete_forever, css_class: :large
   .row
     .col.s10.offset-s1
+      = f.hidden_field :temperature
+      = f.hidden_field :weather
+      = f.hidden_field :weather_icon
+      = f.hidden_field :post_date
+      = f.hidden_field :place
+      = f.hidden_field :text_color
       = f.input :word, class: 'input-field', input_html: { autocomplete: 'off'} , error: { class: 'invaid' }, label_html: { 'data-error': 'wrong' }
       = f.input :image, as: :file, label: m_icon(:file_upload)
-      = f.hidden_field :image_cache
-      #mobile-menu.side-nav
-        .row
-          .col.s12.center-align
-            .h3 Settings
-        .row
-          .col.s12.center-align
-            %label Location
-            .switch
-              %label
-                = f.check_box :show_location
-                %span.lever
-        .row
-          .col.s12.center-align
-            %label Weather
-            .switch
-              %label
-                = f.check_box :show_weather
-                %span.lever
-        .row
-          .col.s12.center-align
-            %label Temperature
-            .switch
-              %label
-                = f.check_box :show_temp
-                %span.lever
-        .row
-          .col.s12.center-align
-            %label Date
-            .switch
-              %label
-                = f.check_box :show_date
-                %span.lever
-        - if diary.id.present?
-          .row
-            .col.s12.center-align
-              = link_to diary_path(diary), method: :delete, class: ['btn', 'waves-effect', 'red', 'no-barba'] do
-                = m_icon :delete_forever, css_class: :large
       .row
         .col.s6.center-align
-          = f.hidden_field :temperature
-          = f.hidden_field :weather
-          = f.hidden_field :weather_icon
-          = f.hidden_field :post_date
-          = f.hidden_field :place
-          = f.hidden_field :text_color
           %button.btn.waves-effect.waves-light.col.s12(type="submit")
             = m_icon :send

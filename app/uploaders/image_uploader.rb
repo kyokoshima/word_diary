@@ -57,15 +57,20 @@ class ImageUploader < CarrierWave::Uploader::Base
           c.draw "text 0,0 '#{model.word}'"
           c.weight 'Heavy'
           c.style 'Any'
-          c.stroke "#333333"
-          c.strokewidth 0.3
+# c.stroke "#000"
+          c.strokewidth 2
           c.gravity 'SouthWest'
           c.pointsize 20
-          c.draw "text 30,50 '#{model.place}'"
+          c.draw "text 50,60 '#{model.place}'" if model.show_location
+          c.draw "text 90,27 '#{model.temperature}'" if model.show_temp
 
           c.gravity 'SouthEast'
-          c.draw "text 30,30 '#{model.post_date}'"
-
+          c.draw "text 40,27 '#{model.post_date}'" if model.show_date
+          
+          c.gravity 'SouthWest'
+          c.font model.weather_font_path      
+          c.draw "text 50,25 '#{model.weather_icon_letter}'" if model.show_weather
+#    c.shadow '15, 15'
           
           c.fill("#FFFFFF")
         end
@@ -93,5 +98,15 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+  def filename
+    "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
+
+  protected 
+  def secure_token
+    var = :"@#{mounted_as}_secure_token"
+    model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
+  end
 
 end

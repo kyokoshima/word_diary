@@ -1,6 +1,6 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
-
+  protect_from_forgery except: :weather_mappings
   # GET /diaries
   # GET /diaries.json
   def index
@@ -15,6 +15,12 @@ class DiariesController < ApplicationController
   # GET /diaries/new
   def new
     @diary = Diary.new
+  end
+
+  def weather_mappings
+    respond_to do |format|
+      format.js {render layout: false}
+    end
   end
 
   # GET /diaries/1/edit
@@ -61,6 +67,9 @@ class DiariesController < ApplicationController
     end
   end
 
+  def top
+    render layout: 'top'
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_diary
@@ -69,6 +78,6 @@ class DiariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def diary_params
-      params.require(:diary).permit(:word, :weather, :temperature, :image, :image_cache, :post_date, :place, :show_weather, :show_temp, :show_date, :show_location, :weather_icon, :text_color)
+      params.require(:diary).permit(:word, :weather, :temperature,:post_date, :place, :show_weather, :show_temp, :show_date, :show_location, :weather_icon, :text_color, :image, :image_cache )
     end
 end

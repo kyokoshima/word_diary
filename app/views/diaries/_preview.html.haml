@@ -3,7 +3,7 @@
 		.preview-container
 			.preview-container-inner
 				.preview-container-content
-					= diary_image diary, origin: true, id: :preview
+					= diary_image diary, origin: false, id: :preview
 					.word-container
 						.word-container-inner
 							#preview-word
@@ -24,5 +24,3 @@
 						.date-container-inner
 							#preview-date
 								= diary.post_date
-:javascript
-	window.weather_mappings = #{weather_mappings.to_json.html_safe};

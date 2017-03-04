@@ -10,6 +10,7 @@ ready = ->
     console.log el
   Barba.Dispatcher.on 'transitionCompleted', (st) ->
     pageInit()
+    Materialize.updateTextFields() if Materialize.updateTextFields
   getNewPageFile = -> 
     return Barba.HistoryManager.currentStatus().url.split('/').pop();
   pageInit = ->
@@ -52,15 +53,24 @@ ready = ->
     $('#diary_show_location').change ->
       container = $('.place-container')
       if $(@).prop('checked') then container.show() else container.hide()
-    Materialize.toast $('#notice').text(), 3000 if $('#notice').text()
-    Materialize.toast $('#error').text(), 3000 if $('#error').text()
-    Materialize.updateTextFields() if Materialize.updateTextFields
     if getNewPageFile() == 'new'
+#d = new $.Deferred
       [lastLat, lastLon, lastTemp, lastIcon] = ''
       if navigator.geolocation and $('.preview-container')
-        url = 'http://api.openweathermap.org/data/2.5/weather'
-        key = '317b5b5a2c782dd1b7aab1c82867e90c'
+        Materialize.toast 'Getting your location...', 2000
+        d = new $.Deferred
         watchId = navigator.geolocation.watchPosition (position) ->
+            d.resolve(position)
+          , (error) ->
+            d.reject(error)
+            console.log error   
+            Materialize.toast "Couldn't get your location", 3000
+          d.promise()
+        .then (position) ->
+          inner = '<div class="circle"></div>'
+          Materialize.toast "Getting weather of your place...", 2000
+          url = 'http://api.openweathermap.org/data/2.5/weather'
+          key = '317b5b5a2c782dd1b7aab1c82867e90c'
           lat = position.coords.latitude
           lon = position.coords.longitude
           [lastLat ,lastLon] = [lat, lon]
@@ -73,31 +83,27 @@ ready = ->
               lon: lon,
               units: 'metric'
             }
-          .done (response, status, xhr) ->
-            place = response.name
-            $('#preview-place').text place
-            $('#diary_place').val place
-            temp = "#{Math.round response.main.temp}℃"
-            $('#preview-temp').text temp
-            $('#diary_temperature').val temp
-            
-            weather = response.weather[0]
-            icon = weather.icon
-            $('#preview-weather i').addClass(weather_mappings[icon]['icon'])
-            $('#diary_weather').val weather.main
-          .fail (xhr, status, error) ->
-            console.log error
-          .always (data, status, error) ->
-            console.log status
-        , (error) ->
-          console.log error   
-          Materialize.toast "Couldn't get your location", 3000
+        .done (response, status, xhr) ->
+          place = response.name
+          $('#preview-place').text place
+          $('#diary_place').val place
+          temp = "#{Math.round response.main.temp}℃"
+          $('#preview-temp').text temp
+          $('#diary_temperature').val temp
+          
+          weather = response.weather[0]
+          icon = weather.icon
+          $('#preview-weather i').addClass(weather_mappings[icon]['icon'])
+          $('#diary_weather').val weather.main
+          $('#diary_weather_icon').val icon
+        .fail (xhr, status, error) ->
+          console.log error
+        .always (data, status, error) ->
+          console.log status
       post_date = moment().format("ddd, MMM D, YYYY")
       $('#preview-date').text(post_date)
       $('#diary_post_date').val(post_date)
   pageInit()
-
-
   MovePage = Barba.BaseTransition.extend
     start: -> 
       Promise
@@ -156,5 +162,6 @@ complementColor = (color) ->
   [newR, newG, newB] = [sum - r, sum-g, sum-b]
   "rgb(#{newR},#{newG},#{newB})"
 
-$(document).ready(ready)
 $(document).on 'turbolinks:load', ready
+Materialize.toast $('#notice').text(), 3000 if $('#notice').text()
+Materialize.toast $('#error').text(), 3000 if $('#error').text()

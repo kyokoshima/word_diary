@@ -9,8 +9,9 @@ module DiariesHelper
 	end
 
 	def weather_icon icon
-		klz = weather_mappings
-		content_tag :i, nil, class: ['wi', klz[icon]]
+		klz = ['wi']
+    klz <<  weather_mappings[icon.to_sym][:icon] if icon.present?
+		content_tag :i, nil, class: ['wi', klz]
 	end
 	def weather_mappings
     Diary.weather_mappings
