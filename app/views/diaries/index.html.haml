@@ -1,4 +1,6 @@
 %p#notice(style="display: none;")= notice if notice.present? 
+#mobile-menu.side-nav
+  = render 'diaries/shared/mobile_menu'
 .row
   - @diaries.each do | diary |
     .col.s4.gallery-cell

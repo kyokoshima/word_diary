@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.remotipart
-//= require moment
 //= require barba
 //= require 'greensock/TweenMax'
 //= require 'greensock/plugins/CSSPlugin'

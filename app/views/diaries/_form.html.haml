@@ -39,6 +39,7 @@
         .col.s12.center-align
           = link_to diary_path(diary), method: :delete, class: ['btn', 'waves-effect', 'red', 'no-barba'] do
             = m_icon :delete_forever, css_class: :large
+    = render 'diaries/shared/mobile_menu'
   .row
     .col.s10.offset-s1
       = f.hidden_field :temperature
