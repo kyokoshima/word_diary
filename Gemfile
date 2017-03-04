@@ -83,3 +83,5 @@ gem 'momentjs-rails'
 gem 'simple_form'
 gem 'greensock-rails'
 gem 'devise'
+
+gem 'rails_12factor', group: :production
