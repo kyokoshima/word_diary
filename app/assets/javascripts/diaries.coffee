@@ -83,23 +83,29 @@ ready = ->
               lon: lon,
               units: 'metric'
             }
-        .done (response, status, xhr) ->
-          place = response.name
-          $('#preview-place').text place
-          $('#diary_place').val place
-          temp = "#{Math.round response.main.temp}℃"
-          $('#preview-temp').text temp
-          $('#diary_temperature').val temp
-          
-          weather = response.weather[0]
-          icon = weather.icon
-          $('#preview-weather i').addClass(weather_mappings[icon]['icon'])
-          $('#diary_weather').val weather.main
-          $('#diary_weather_icon').val icon
-        .fail (xhr, status, error) ->
-          console.log error
-        .always (data, status, error) ->
-          console.log status
+        .then(
+          (response, status, xhr) ->
+            d = new $.Deferred
+            place = response.name
+            $('#preview-place').text place
+            $('#diary_place').val place
+            temp = "#{Math.round response.main.temp}℃"
+            $('#preview-temp').text temp
+            $('#diary_temperature').val temp
+            
+            weather = response.weather[0]
+            icon = weather.icon
+            $('#diary_weather').val weather.main
+            $('#diary_weather_icon').val icon
+            d.resolve(icon).promise()
+          , (xhr, status, error) ->
+            console.log error
+            new $.Deferred().reject().promise()
+          )
+        .then (icon) ->
+          $.ajax 'weather_mappings', dataType: 'json'
+          .then (response) ->
+            $('#preview-weather i').addClass(response[icon]['icon'])
       post_date = moment().format("ddd, MMM D, YYYY")
       $('#preview-date').text(post_date)
       $('#diary_post_date').val(post_date)

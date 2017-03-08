@@ -18,9 +18,7 @@ class DiariesController < ApplicationController
   end
 
   def weather_mappings
-    respond_to do |format|
-      format.js {render layout: false}
-    end
+    render json: Diary.weather_mappings
   end
 
   # GET /diaries/1/edit
@@ -31,6 +29,7 @@ class DiariesController < ApplicationController
   # POST /diaries.json
   def create
     @diary = Diary.new(diary_params)
+    @diary.user = current_user
 
     respond_to do |format|
       if @diary.save
@@ -68,6 +67,7 @@ class DiariesController < ApplicationController
   end
 
   def top
+    redirect_to diaries_path if user_signed_in?
     render layout: 'top'
   end
   private

@@ -11,6 +11,6 @@ Rails.application.routes.draw do
       get :weather_mappings
     end
   end
-  root to: 'diaries#top'
+  root to: 'diaries#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -6,15 +6,8 @@
         = diary_image @diary, clz: :materialboxed
       .card-content
         %p
-          %strong Word:
-          = @diary.word
-        %p
-          %strong Weather:
-          = @diary.weather
-        %p
-          %strong Temperature:
-          = @diary.temperature
-        
-= link_to 'Edit', edit_diary_path(@diary)
-|
-= link_to 'Back', diaries_path
+          %strong Name:
+          = @diary.user.name
+
+= render layout: 'diaries/shared/mobile_menu' do
+  = link_to 'Edit', edit_diary_path(@diary)

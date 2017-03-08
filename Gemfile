@@ -69,6 +69,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem "refile", require: "refile/rails", github: 'manfe/refile'
 # gem "refile-mini_magick"
 
+gem 'fog'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'remotipart'
@@ -84,4 +85,6 @@ gem 'simple_form'
 gem 'greensock-rails'
 gem 'devise'
 
+
 gem 'rails_12factor', group: :production
+ruby '2.4.0'

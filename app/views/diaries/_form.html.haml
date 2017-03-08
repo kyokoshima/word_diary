@@ -1,8 +1,10 @@
 - if diary.errors.any?
-  %p#error(style="display: none;") 【Input Error】Please check the input.
+  %p#error(style="display: none;")
+  【Input Error】Please check the input.
+  = diary.errors.full_messages      
 = render 'preview', diary: diary
 = simple_form_for diary do |f|
-  #mobile-menu.side-nav
+  = render layout: 'diaries/shared/mobile_menu' do
     .row
       .col.s12.center-align
         .h3 Settings
@@ -39,7 +41,6 @@
         .col.s12.center-align
           = link_to diary_path(diary), method: :delete, class: ['btn', 'waves-effect', 'red', 'no-barba'] do
             = m_icon :delete_forever, css_class: :large
-    = render 'diaries/shared/mobile_menu'
   .row
     .col.s10.offset-s1
       = f.hidden_field :temperature
@@ -50,6 +51,7 @@
       = f.hidden_field :text_color
       = f.input :word, class: 'input-field', input_html: { autocomplete: 'off'} , error: { class: 'invaid' }, label_html: { 'data-error': 'wrong' }
       = f.input :image, as: :file, label: m_icon(:file_upload)
+      = f.hidden_field :image_cache
       .row
         .col.s6.center-align
           %button.btn.waves-effect.waves-light.col.s12(type="submit")
