@@ -1,6 +1,4 @@
 %p#notice(style="display: none;")= notice if notice.present? 
-#mobile-menu.side-nav
-  = render 'diaries/shared/mobile_menu'
 .row
   - @diaries.each do | diary |
     .col.s4.gallery-cell
@@ -11,3 +9,4 @@
 .fixed-action-btn
   = link_to new_diary_path, class: ['btn-floating','btn-large','waves-effect', 'waves-light','red'] do 
     %i.material-icons note_add
+= render 'diaries/shared/mobile_menu'

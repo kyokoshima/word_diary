@@ -1,6 +1,7 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
   protect_from_forgery except: :weather_mappings
+  load_and_authorize_resource
   # GET /diaries
   # GET /diaries.json
   def index
@@ -14,7 +15,11 @@ class DiariesController < ApplicationController
 
   # GET /diaries/new
   def new
-    @diary = Diary.new
+    if can? :manage, controller_name.classify
+      @diary = Diary.new
+    else
+      render text: 'forbidden', status: 403
+    end
   end
 
   def weather_mappings

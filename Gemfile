@@ -84,7 +84,7 @@ gem 'momentjs-rails'
 gem 'simple_form'
 gem 'greensock-rails'
 gem 'devise'
-
+gem 'cancancan'
 
 gem 'rails_12factor', group: :production
 ruby '2.4.0'

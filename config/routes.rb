@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
     get :sign_in, to: 'devise/sessions#new'
-    get :sign_out, to: 'devise/sessions#destroy'
+    delete :sign_out, to: 'devise/sessions#destroy'
     get :sign_up, to: 'devise/registrations#new'
   end
   get :diaries, to: 'diaries#index', as: :user_root
