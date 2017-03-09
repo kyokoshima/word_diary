@@ -22,6 +22,21 @@ class Diary < ApplicationRecord
     static_font_path 'weathericons-regular-webfont' 
   end
 
+  def self.detect_weather lat, lon
+    require 'open_weather'
+    key = '317b5b5a2c782dd1b7aab1c82867e90c'
+    options = { units: :metric , APPID: key}  
+    result = OpenWeather::Current.geocode(lat, lon, options)
+    weather = result['weather'][0]
+    weather_icon = weather['icon'].to_sym
+    { place: result['name'], 
+      temp: "#{result['main']['temp'].round}℃", 
+      weather: weather['main'],
+      icon: weather['icon'],
+      icon_class: weather_mappings[weather_icon][:icon]
+    }
+  end
+
   def weather_icon_letter
     if weather_icon.present?
       code = Diary.weather_mappings[weather_icon.to_sym][:letter] 

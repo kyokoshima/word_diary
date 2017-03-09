@@ -76,6 +76,7 @@ gem 'remotipart'
 
 # gem 'bulma-rails'
 # gem 'uikit-rails'
+gem 'open-weather'
 gem 'font-awesome-rails'
 gem 'haml-rails'
 gem 'materialize-sass'

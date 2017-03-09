@@ -22,6 +22,10 @@ class DiariesController < ApplicationController
     end
   end
 
+  def weather
+    render json: Diary.detect_weather params[:lat], params[:lon]
+  end
+
   def weather_mappings
     render json: Diary.weather_mappings
   end
