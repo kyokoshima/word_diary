@@ -86,6 +86,7 @@ gem 'simple_form'
 gem 'greensock-rails'
 gem 'devise'
 gem 'cancancan'
+gem 'resources_id_replace'
 
 gem 'rails_12factor', group: :production
 ruby '2.4.0'

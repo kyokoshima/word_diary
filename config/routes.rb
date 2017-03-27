@@ -6,11 +6,14 @@ Rails.application.routes.draw do
     get :sign_up, to: 'devise/registrations#new'
   end
   get :diaries, to: 'diaries#index', as: :user_root
-  resources :diaries do
-    collection do
-      get :weather_mappings
+  resources :users, param: :name do
+    resources :diaries do
+      collection do
+        get :weather_mappings
+        get :weather
+      end
     end
   end
-  root to: 'diaries#index'
+  root to: 'diaries#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

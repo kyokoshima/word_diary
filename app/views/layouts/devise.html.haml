@@ -16,9 +16,6 @@
               .nav-wrapper
                 %ul.left
                   %li 
-                    - unless current_page? diaries_path
-                      = link_to diaries_path do
-                        = m_icon :arrow_back
                       
                 %a.brand-logo W
                 %a.right.button-collapse(data-activates="mobile-menu")

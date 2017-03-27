@@ -16,8 +16,7 @@
                 %a Navbar Link
             %a.right.button-collapse(data-activates="mobile-menu")
               = m_icon :menu
-            #mobile-menu.side-nav
-              = render 'diaries/shared/mobile_menu'
+            = render 'diaries/shared/mobile_menu'
         #index-banner.parallax-container.valign-wrapper
           .section
             .container
@@ -25,7 +24,7 @@
               .row.center
                 %h5.header.col.s12.light The most simplest diary in the world
               .row.center
-                %a.btn-large.waves-effect.waves-light.teal Get Started
+                = link_to_no_barba 'Get Started', sign_in_path, class: ['btn-large','waves-effect','waves-light','teal']
           .parallax
             = image_tag 'top-bg.jpg'
         .container

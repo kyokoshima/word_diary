@@ -69,43 +69,40 @@ ready = ->
         .then (position) ->
           inner = '<div class="circle"></div>'
           Materialize.toast "Getting weather of your place...", 2000
-          url = 'http://api.openweathermap.org/data/2.5/weather'
-          key = '317b5b5a2c782dd1b7aab1c82867e90c'
+# url = 'http://api.openweathermap.org/data/2.5/weather'
+#          key = '317b5b5a2c782dd1b7aab1c82867e90c'
           lat = position.coords.latitude
           lon = position.coords.longitude
           [lastLat ,lastLon] = [lat, lon]
 
-          $.ajax url,
-            type: 'get',
-            data: {
-              appid: key,
-              lat: lat,
-              lon: lon,
-              units: 'metric'
-            }
+#          $.ajax url,
+#            type: 'get',
+#            data: {
+#              appid: key,
+#              lat: lat,
+#              lon: lon,
+#              units: 'metric'
+#            }
+          $.ajax 'weather',
+            data: {lat: lat, lon: lon}, dataType: 'json'
         .then(
           (response, status, xhr) ->
             d = new $.Deferred
-            place = response.name
+            place = response.place
             $('#preview-place').text place
             $('#diary_place').val place
-            temp = "#{Math.round response.main.temp}℃"
+            temp = response.temp
             $('#preview-temp').text temp
             $('#diary_temperature').val temp
             
-            weather = response.weather[0]
-            icon = weather.icon
-            $('#diary_weather').val weather.main
-            $('#diary_weather_icon').val icon
-            d.resolve(icon).promise()
+            $('#diary_weather').val response.weather
+            $('#diary_weather_icon').val response.icon
+            $('#preview-weather i').addClass(response.icon_class)
+            d.resolve().promise()
           , (xhr, status, error) ->
             console.log error
             new $.Deferred().reject().promise()
           )
-        .then (icon) ->
-          $.ajax 'weather_mappings', dataType: 'json'
-          .then (response) ->
-            $('#preview-weather i').addClass(response[icon]['icon'])
       post_date = moment().format("ddd, MMM D, YYYY")
       $('#preview-date').text(post_date)
       $('#diary_post_date').val(post_date)

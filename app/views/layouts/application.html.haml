@@ -17,8 +17,8 @@
               .nav-wrapper
                 %ul.left
                   %li 
-                    - unless current_page? diaries_path
-                      = link_to diaries_path do
+                    - unless current_page? user_diaries_path(current_user)
+                      = link_to user_diaries_path(current_user) do
                         = m_icon :arrow_back
                       
                 %a.brand-logo W

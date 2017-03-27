@@ -4,9 +4,10 @@
     .col.s4.gallery-cell
       .card
         .card-image
-          = link_to diary do 
+          = link_to [current_user,diary] do 
             = diary_image diary
-.fixed-action-btn
-  = link_to new_diary_path, class: ['btn-floating','btn-large','waves-effect', 'waves-light','red'] do 
-    %i.material-icons note_add
+- if user_signed_in?
+  .fixed-action-btn
+    = link_to new_user_diary_path(current_user), class: ['btn-floating','btn-large','waves-effect', 'waves-light','red'] do 
+      %i.material-icons note_add
 = render 'diaries/shared/mobile_menu'

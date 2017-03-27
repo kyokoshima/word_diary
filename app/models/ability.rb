@@ -30,13 +30,14 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
     user ||= User.new
     
+    cannot :all
     if user.new_record?
-      cannot :all
+      can :read, Diary
+      can :top, Diary
     else
       can :manage, :all
       can :manage, Diary, user_id: user.id
     end
-    can :read, Diary 
 
   end
 end
