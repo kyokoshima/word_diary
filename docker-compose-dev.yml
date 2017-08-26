@@ -1,0 +1,10 @@
+version: "2"
+services:
+  web:
+    volumes:
+      - web-sync:/word_d:nocopy # will be mounted on /word_d
+
+# that the important thing
+volumes:
+  web-sync:
+    external: true
