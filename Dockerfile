@@ -7,10 +7,11 @@ ENV APP_HOME /word_diary
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
-ADD Gemfile /word_diary/Gemfile
-ADD Gemfile.lock /word_diary/Gemfile.lock
+COPY Gemfile Gemfile
+COPY Gemfile.lock Gemfile.lock
+
 ENV BUNDLE_GEMFILE=$APP_HOME/Gemfile \
                      BUNDLE_JOBS=8 \
                        BUNDLE_PATH=/bundle
 RUN bundle install
-ADD . /word_diary
+ADD . $APP_HOME
