@@ -17,9 +17,10 @@
               .nav-wrapper
                 %ul.left
                   %li 
-                    - unless current_page? user_diaries_path(current_user)
-                      = link_to user_diaries_path(current_user) do
-                        = m_icon :arrow_back
+                    - if user_signed_in?
+                      - unless current_page? user_diaries_path(current_user)
+                        = link_to user_diaries_path(current_user) do
+                          = m_icon :arrow_back
                       
                 %a.brand-logo W
                 %a.right.button-collapse(data-activates="mobile-menu")

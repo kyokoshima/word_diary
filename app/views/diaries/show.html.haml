@@ -10,4 +10,4 @@
           = @diary.user.name
 
 = render layout: 'diaries/shared/mobile_menu' do
-  = link_to 'Edit', edit_diary_path(@diary)
+  = link_to 'Edit', edit_user_diary_path(current_user, @diary)

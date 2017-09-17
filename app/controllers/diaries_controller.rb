@@ -42,7 +42,7 @@ class DiariesController < ApplicationController
 
     respond_to do |format|
       if @diary.save
-        format.html { redirect_to diaries_path, notice: 'Diary was successfully created.' }
+        format.html { redirect_to user_diaries_path(@diary.user), notice: 'Diary was successfully created.' }
         format.json { render :show, status: :created, location: @diary }
       else
         format.html { render :new }
@@ -56,7 +56,7 @@ class DiariesController < ApplicationController
   def update
     respond_to do |format|
       if @diary.update(diary_params)
-        format.html { redirect_to diaries_path, notice: 'Diary was successfully updated.' }
+        format.html { redirect_to user_diaries_path(current_user), notice: 'Diary was successfully updated.' }
         format.json { render :show, status: :ok, location: @diary }
       else
         format.html { render :edit }
@@ -70,14 +70,14 @@ class DiariesController < ApplicationController
   def destroy
     @diary.destroy
     respond_to do |format|
-      format.html { redirect_to diaries_url, notice: 'Diary was successfully destroyed.' }
+      format.html { redirect_to user_diaries_url(current_user), notice: 'Diary was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   def top
-    redirect_to diaries_path if user_signed_in?
-    render layout: 'top'
+    redirect_to user_diaries_path(current_user) if user_signed_in?
+# render layout: 'top'
   end
   private
     # Use callbacks to share common setup or constraints between actions.

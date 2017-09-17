@@ -3,7 +3,7 @@
   【Input Error】Please check the input.
   = diary.errors.full_messages      
 = render 'preview', diary: diary
-= simple_form_for diary do |f|
+= simple_form_for [current_user, diary] do |f|
   = render layout: 'diaries/shared/mobile_menu' do
     .row
       .col.s12.center-align
