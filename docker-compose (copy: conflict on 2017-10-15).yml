@@ -21,7 +21,7 @@ services:
     build: .
     command: bundle exec bin/webpack-dev-server
     ports:
-      - "8080:8080"    
+      - "8080:8080"
   bundle:
     image: worddiary_web
     volumes:

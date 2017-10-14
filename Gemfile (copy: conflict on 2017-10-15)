@@ -50,7 +50,7 @@ group :development, :test do
 
 	gem 'tapp'
 	gem 'awesome_print'
-	# gem 'annotate', git: 'git://github.com/ctran/annotate_models.git'
+	gem 'annotate', git: 'git://github.com/ctran/annotate_models.git'
 	gem 'timecop'
 end
 
@@ -88,10 +88,13 @@ gem 'devise'
 gem 'cancancan'
 gem 'resources_id_replace'
 
+gem 'rails_12factor', group: :production
+
 gem "react_on_rails", "9.0.0"
 gem "webpacker", "~> 3.0"
 gem 'mini_racer', platforms: :ruby
 gem 'libv8'
+gem 'foreman'
+gem 'rake'
 
-gem 'rails_12factor', group: :production
 ruby '2.4.0'
