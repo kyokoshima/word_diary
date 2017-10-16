@@ -18,10 +18,12 @@ services:
       - container:web-sync:rw
       - bundle
   webpacker:
-    build: .
+    image: worddiary_web
     command: bundle exec bin/webpack-dev-server
     ports:
-      - "8080:8080"    
+      - "8080:8080"
+    volumes:
+      - .:/word_diary
   bundle:
     image: worddiary_web
     volumes:
