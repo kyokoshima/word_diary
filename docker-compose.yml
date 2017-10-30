@@ -2,6 +2,10 @@ version: '2'
 services:
   db:
     image: postgres
+  bundle:
+    image: worddiary_web
+    volumes:
+      - /bundle
   web:
     tty: true
     stdin_open: true
@@ -24,10 +28,7 @@ services:
       - "8080:8080"
     volumes:
       - .:/word_diary
-  bundle:
-    image: worddiary_web
-    volumes:
-      - /bundle
+
 volumes:
   web-sync:
     external: true
