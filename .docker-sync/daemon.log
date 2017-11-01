@@ -66770,3 +66770,2771 @@ Looking for changes
 Reconciling changes
 Nothing to do: replicas have not changed since last sync.
 Fatal error: Lost connection with the server
+          ok  Starting unison for sync web-sync
+          ok  web-sync container still running, restarting unison in container
+     command  docker exec web-sync supervisorctl restart unison
+          ok  starting initial sync of web-sync
+     command  docker inspect --format='{{(index (index .NetworkSettings.Ports "5000/tcp") 0).HostPort}}' web-sync
+     command  unison -testserver /app_sync "socket://127.0.0.1:32770"
+     command  docker inspect --format='{{(index (index .NetworkSettings.Ports "5000/tcp") 0).HostPort}}' web-sync
+     command  unison '/home/owner/work/word_diary/' -auto -batch -prefer '/home/owner/work/word_diary/' -copyonconflict socket://127.0.0.1:32770
+          ok  Synced /home/owner/work/word_diary/
+      output  / .docker-sync/daemon.pid                         / node_modules/mkdirp/node_modules/minimist/test/default_bool.js                                                                changed  ---->            .docker-sync/daemon.log  
+changed  ---->            .docker-sync/daemon.pid  
+ 99%  00:00 ETA               100%  00:00 ETA               100%  00:00 ETA               100%  00:00 ETA               100%  00:00 ETA               
+     success  Unison server started
+     command  docker inspect --format='{{(index (index .NetworkSettings.Ports "5000/tcp") 0).HostPort}}' web-sync
+     command  unison '/home/owner/work/word_diary/' -auto -batch -prefer '/home/owner/work/word_diary/' -copyonconflict socket://127.0.0.1:32770
+          ok  Synced /home/owner/work/word_diary/
+      output  - .docker-sync/daemon.pid                         - node_modules/mathjs/docs/reference/functions/ones.md                                                      changed  ---->            .docker-sync/daemon.log  
+100%  00:00 ETA               100%  00:00 ETA               100%  00:00 ETA               
+     command  docker inspect --format='{{(index (index .NetworkSettings.Ports "5000/tcp") 0).HostPort}}' web-sync
+     command  unison '/home/owner/work/word_diary/' -auto -batch -prefer '/home/owner/work/word_diary/' -copyonconflict socket://127.0.0.1:32770 -repeat watch
+Contacting server...
+Connected [//d71040be4856//app_sync -> //owner-virtual-machine//home/owner/work/word_diary]
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 21:59:13.64 on 01 Nov 2017
+[BGN] Updating file .docker-sync/daemon.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+Failed: The source file /home/owner/work/word_diary/.docker-sync/daemon.log
+has been modified during synchronization.  Transfer aborted.
+UNISON 2.48.4 finished propagating changes at 21:59:13.66 on 01 Nov 2017
+Saving synchronizer state
+Synchronization incomplete at 21:59:13  (0 items transferred, 0 skipped, 1 failed)
+  failed: .docker-sync/daemon.log
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 21:59:14.72 on 01 Nov 2017
+[BGN] Updating file .docker-sync/daemon.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+Failed: The source file /home/owner/work/word_diary/.docker-sync/daemon.log
+has been modified during synchronization.  Transfer aborted.
+UNISON 2.48.4 finished propagating changes at 21:59:14.75 on 01 Nov 2017
+Saving synchronizer state
+Synchronization incomplete at 21:59:14  (0 items transferred, 0 skipped, 1 failed)
+  failed: .docker-sync/daemon.log
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 21:59:19.98 on 01 Nov 2017
+[BGN] Updating file .docker-sync/daemon.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+Failed: The source file /home/owner/work/word_diary/.docker-sync/daemon.log
+has been modified during synchronization.  Transfer aborted.
+UNISON 2.48.4 finished propagating changes at 21:59:20.05 on 01 Nov 2017
+Saving synchronizer state
+Synchronization incomplete at 21:59:20  (0 items transferred, 0 skipped, 1 failed)
+  failed: .docker-sync/daemon.log
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 21:59:30.01 on 01 Nov 2017
+[BGN] Updating file .docker-sync/daemon.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+Failed: The source file /home/owner/work/word_diary/.docker-sync/daemon.log
+has been modified during synchronization.  Transfer aborted.
+UNISON 2.48.4 finished propagating changes at 21:59:30.07 on 01 Nov 2017
+Saving synchronizer state
+Synchronization incomplete at 21:59:30  (0 items transferred, 0 skipped, 1 failed)
+  failed: .docker-sync/daemon.log
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 21:59:50.22 on 01 Nov 2017
+[BGN] Updating file .docker-sync/daemon.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+Failed: The source file /home/owner/work/word_diary/.docker-sync/daemon.log
+has been modified during synchronization.  Transfer aborted.
+UNISON 2.48.4 finished propagating changes at 21:59:50.25 on 01 Nov 2017
+Saving synchronizer state
+Synchronization incomplete at 21:59:50  (0 items transferred, 0 skipped, 1 failed)
+  failed: .docker-sync/daemon.log
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:00:03.85 on 01 Nov 2017
+[BGN] Updating file log/development.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Updating file log/development.log
+UNISON 2.48.4 finished propagating changes at 22:00:03.87 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:00:03  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:00:08.05 on 01 Nov 2017
+[BGN] Copying tmp/pids/server.pid from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Copying tmp/pids/server.pid
+UNISON 2.48.4 finished propagating changes at 22:00:08.06 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:00:08  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:00:12.22 on 01 Nov 2017
+[BGN] Updating file public/packs/manifest.json from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Updating file public/packs/manifest.json
+UNISON 2.48.4 finished propagating changes at 22:00:12.26 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:00:12  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:00:31.04 on 01 Nov 2017
+[BGN] Updating file .docker-sync/daemon.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+Failed: The source file /home/owner/work/word_diary/.docker-sync/daemon.log
+has been modified during synchronization.  Transfer aborted.
+UNISON 2.48.4 finished propagating changes at 22:00:31.08 on 01 Nov 2017
+Saving synchronizer state
+Synchronization incomplete at 22:00:31  (0 items transferred, 0 skipped, 1 failed)
+  failed: .docker-sync/daemon.log
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:00:38.41 on 01 Nov 2017
+[BGN] Updating file log/development.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/-6 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/-M/-MRYdgEBmZec7EDZFX3hwz0dDLCf7emGjk2a2wo78pQ.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/0c/0cCjgfHw-aizJ_nvwddtt5KnkxaOTvQw5NQQBQk6MJ8.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/0q from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/0z from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/11/11-rAVUV0HF36Xt469jmxJqywpEyHuVngr93Kp4_Dfw.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/1r/1rjE_mByCQnwCUvT-d5gTIXs1DkW7aUv6jFEYG8pamo.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/1s from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/2h from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/3c from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/4y from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/5e from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/89 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/8O from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/9R/9RYRybmUz3mZCmonjwbdfK8Gi8vmhzaHOIDVxVR0aBI.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/9a from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Bt from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/CJ from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Ck from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/D0 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/D2 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/DJ/DJDJ1GHdJeAhXdwkuHaxPETqzDEtPbr6DQsiTimZ2ZM.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/FX from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Fz from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/GK from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Ho from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/I1 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Ip from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Iw/IwDnP5esfo9kBWetDPoeuXn9HFlfg-Q37VdjkMCiuII.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/J1 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/KJ from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/L4/L4wuA9E4YyzoUuSTYPTigqq04z_kSvQXWMOY4vBEfxQ.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/N3/N3DH5naHDSJQRuE7bdPjsKgaNtOeLKj-uzYnA9GNpMg.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Nl/NlrHUWBAoXFIfdwZQfv8mdQ4ocjxidtjVht-alS4bmM.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Ny/NyjBZHFO7awuOYzD9GOeTIAKMvLKV2ajvlRN9j31Ems.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/OP from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/OV from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Os from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/P0 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/PO from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Q9/Q91rM-exRoPOimZcGdXfRGWu5VR6aAh34xP4Pbf3-7A.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/QE from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/QT from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Qw/Qw0CXT5_R36mnKP5AUzv_UvaeIxfctL59rcx--FOiT8.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/RB from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/RW/RWdJP_T5p09R7oG5dRHIcJFtUdBph50jHb9DyubL46U.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/SL/SLVLc7kHzFnZrXhF3hXktrE68J25obWmrtHoQ4ei4_s.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Sf from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/U5 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Uq from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Uz from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/VX from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Vk from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/W7 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/WA/WAUn4suADVZes8nrk2ITMkUiPk33cALsgO60gYKBJtY.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/WV from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Xp from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Xv from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Xw/XwCbynPcx3EdoU_GY_7Qs0n-O6PJMB_ENwH7yTQPzPE.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Y0/Y0gYuNsnLE1_vEA1MoGWWOUzeYIwtYQptmvh8aHYrKc.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Y8 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/YA from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/_7 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/_K/_KJjNjXi4ASVnP1pTfc4k_UhTmATDRkd3PHxFU7DuL8.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/_N from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/_S from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/_Y from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/aM from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/aw from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/bO/bO2fz3Df95M2BvSZ5CRC02pI7Rdwjuh86Pex4SQ8gL8.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/bn from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/c1 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/dB from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/di from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/eB from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/eG from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/h6/h6Mkte2bfhOocpPDT66Ti1BNUZFGGaWx7pJgWNb-xAs.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/hL from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/hx from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/jB from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/jF from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/k1/k1gfsa5tCVvFNhmQoYDUrZIkyN4TcCTB3ohj8a4IPtY.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/kh/kheTie6-32u0d5meUt6jcHT5JxJiew8lNtO078Jpb3w.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/lM from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/lT from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/ld from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/mA from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/mV from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/mh from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/mz/mzcEB9uA3ZgNs5vpWuFFtw_w0iRGm48EQaJORVoA_-0.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/nA from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/n_ from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/np from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/oJ/oJSibi8X7AqsOB7UIctQC_T2UJ3WtOF917wQAFkwQUs.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/oW from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/pE/pE0wnrkW-enOJJOdIJtW2dIUVjgnMNnIj4BUBr6Llog.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/qN from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/rr from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/ru from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/rz from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/sM from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/sQ from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/sj from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/te from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/u3 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/uA from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/uO/uOj93xxaAvFnM76v65gsARn-80QYVxpWKWwjYyn9N3w.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/uV from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/uZ from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/ub from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/ur from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/x6/x6h1Z3sScX4WqZdowR51TcbyKQ3zLb2DrgrYmlxFibA.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/yF from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/yX/yXJRsa6_Tdgty9x5rgBfUk6hEhglIg2EenoUcGHlwKU.cache from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/yb from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/zQ from /home/owner/work/word_diary to //d71040be4856//app_sync
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/-M/-MRYdgEBmZec7EDZFX3hwz0dDLCf7emGjk2a2wo78pQ.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/zI/zINaCNiHZKerx8Y9tD56dsbLqZKIOtnqpUcUjrqZ-8A.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/0c/0cCjgfHw-aizJ_nvwddtt5KnkxaOTvQw5NQQBQk6MJ8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/yt/ytRuEyI359mUyEkCmHpdphsD7PmTuBxZ0xj-9BWzu7w.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/11/11-rAVUV0HF36Xt469jmxJqywpEyHuVngr93Kp4_Dfw.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/PU/PUNOsV_VcN5zwxXKlCQUNdxkbXkXFcY6dGs0Qx9LaEY.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/1r/1rjE_mByCQnwCUvT-d5gTIXs1DkW7aUv6jFEYG8pamo.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/xp/xpns9JOP19vW8l4PqTce-oe83O32O15VkCKPwQCSGRU.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/9R/9RYRybmUz3mZCmonjwbdfK8Gi8vmhzaHOIDVxVR0aBI.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/xD/xDLY3--dn7wUO4mG9GaPOW-tzqhinrKDH5sQwMljdjw.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/DJ/DJDJ1GHdJeAhXdwkuHaxPETqzDEtPbr6DQsiTimZ2ZM.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/we/wexOQ3PA3t49w_JEh-d1qczY9NZeScyR2GALxMfS2_k.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Iw/IwDnP5esfo9kBWetDPoeuXn9HFlfg-Q37VdjkMCiuII.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/WO/WO8-4uSWwYCjrcoD-cxUjoStUnq-FpqC7Ay7YRAos0M.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/L4/L4wuA9E4YyzoUuSTYPTigqq04z_kSvQXWMOY4vBEfxQ.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/nO/nO-yzIA6zMFU8a60dble90ig6wOnuAcyBK_zLKjRGUU.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/N3/N3DH5naHDSJQRuE7bdPjsKgaNtOeLKj-uzYnA9GNpMg.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/q_/q_j6f2a8_r9efF7tW-GeYuge154wD7zJwVPrVXyopBY.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Nl/NlrHUWBAoXFIfdwZQfv8mdQ4ocjxidtjVht-alS4bmM.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/z1/z1gb72NKYRCt8lBMeczeRWs8ssam-RjEljTyiD8Ox3g.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Ny/NyjBZHFO7awuOYzD9GOeTIAKMvLKV2ajvlRN9j31Ems.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/ym/ymAx3xVwZke7IHFX6_6ToqF3e9ehwzFEMpLKJ4RG4Cw.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Q9/Q91rM-exRoPOimZcGdXfRGWu5VR6aAh34xP4Pbf3-7A.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/gB/gBRpenHsclOd7rvVlDGNbXv-OjSZFpeQfC7D0ga_TW0.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Qw/Qw0CXT5_R36mnKP5AUzv_UvaeIxfctL59rcx--FOiT8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/wq/wqFpWYa6QD8zz2d2KySaYg-fxONrXOTT_LsWx18-Y4c.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/RW/RWdJP_T5p09R7oG5dRHIcJFtUdBph50jHb9DyubL46U.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/qE/qE7TzsrcpeakQ4CwifIjmG4H7ZGKybehwhb6h8n6nuM.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/SL/SLVLc7kHzFnZrXhF3hXktrE68J25obWmrtHoQ4ei4_s.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/zt/ztxc_JILJqLwfviNlwcesV-CmxIdMC964u37HyjywxY.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/WA/WAUn4suADVZes8nrk2ITMkUiPk33cALsgO60gYKBJtY.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/jl/jlzX-KbiJZnNe9Wuu5fGPCUBx6oYwvHEUeEMDpxqQio.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Xw/XwCbynPcx3EdoU_GY_7Qs0n-O6PJMB_ENwH7yTQPzPE.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/rp/rp1LPD3mz_YwzJy-eULgmfBZBiR0AO3hZKznL15uDYI.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Y0/Y0gYuNsnLE1_vEA1MoGWWOUzeYIwtYQptmvh8aHYrKc.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/i6/i6tGB5o-EiEVZgNRK0fn53SAjxsfcv9zpU02NSNINhI.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/_K/_KJjNjXi4ASVnP1pTfc4k_UhTmATDRkd3PHxFU7DuL8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/nX/nXdouAuRFDX5Ps9cxz9pTwOyuWw8hb6YsD3khkBRInA.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/bO/bO2fz3Df95M2BvSZ5CRC02pI7Rdwjuh86Pex4SQ8gL8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/uW/uWjGymzp--S9UiaFGoMQdLSmezSG-7nzYcGOK3npYbA.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/h6/h6Mkte2bfhOocpPDT66Ti1BNUZFGGaWx7pJgWNb-xAs.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/wd/wdlid4lbWg0rL7Gqpg7SrJMwIW5CCettY2PLOfW81Q0.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/k1/k1gfsa5tCVvFNhmQoYDUrZIkyN4TcCTB3ohj8a4IPtY.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/cs/csrbbm0GeTUcnMuYQsUlbwEjreesj-tNoLlsqM3OKFk.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/kh/kheTie6-32u0d5meUt6jcHT5JxJiew8lNtO078Jpb3w.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/xk/xkO9uBvl8BYL5WnM8-UwkQUKMvqyBxfji3EdiSrUzQw.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/mz/mzcEB9uA3ZgNs5vpWuFFtw_w0iRGm48EQaJORVoA_-0.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/x6/x6PfM3OrIyp6V61fY3EqYw2_27ei04szi6c4gzJwl0o.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/oJ/oJSibi8X7AqsOB7UIctQC_T2UJ3WtOF917wQAFkwQUs.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/bR/bR__tc6I6cfZjAyRGl0GtZn6GnJ3hLZhtfIOM0lE7gM.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/pE/pE0wnrkW-enOJJOdIJtW2dIUVjgnMNnIj4BUBr6Llog.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/yk/ykgVIsHvTL-Af1eaE0yg34uQ-8CLYSL0_w5RDebbaeQ.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/uO/uOj93xxaAvFnM76v65gsARn-80QYVxpWKWwjYyn9N3w.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/JV/JVdjeiU32UVFiOhoEUaFy5Hvx0j4AwDF7WUii5xMNtA.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/x6/x6h1Z3sScX4WqZdowR51TcbyKQ3zLb2DrgrYmlxFibA.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/ms/ms9KDqcw8T32HErDoYzAI368gz3MOeH-qiohFPrhBz4.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/yX/yXJRsa6_Tdgty9x5rgBfUk6hEhglIg2EenoUcGHlwKU.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/zS/zSZpC5IudTn1Mm5lwYxzEbVgJnez46dxHSoC52R4NJ4.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/-6/-6txkwy86Etxc1vuq0ry9z8cdrhTH2bm2tktYDppSnw.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/lF/lFhEQhIQ18pDFrydoP5p7dgdsct8IvKSUhMxR45ILAE.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/-M/-MRYdgEBmZec7EDZFX3hwz0dDLCf7emGjk2a2wo78pQ.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/0c/0cCjgfHw-aizJ_nvwddtt5KnkxaOTvQw5NQQBQk6MJ8.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/0q/0q8WH7FYLITqkabUEyNdoeqKnI4ceOHR6IYdTqtyohU.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/sz/szj4T6MUCbRcrJoLGOGc72Ube8iFOI39gBlWyVJ98Js.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/0z/0zIgYYwEW8Gd9IXWirOrTDELtbBfErdaUlYE53Cm0u8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/gX/gXScQjGmYxETGZjp_yBhje7_mlkDI0HI4O88iJYMDwE.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/11/11-rAVUV0HF36Xt469jmxJqywpEyHuVngr93Kp4_Dfw.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/1r/1rjE_mByCQnwCUvT-d5gTIXs1DkW7aUv6jFEYG8pamo.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/1s/1sb5D8HVK1fsIzfvIBc9QZO0xKXMyBjTotBi19-6n18.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/dg/dgy209QWfBDB3aFTz8i75sRvCSAXmRFMpDKo4HCP-5U.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/2h/2hMrj9EUFJ5TkhzPEmlaDPBTsUV5q293ba9ehFp1dVs.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/zO/zO7E9k8ZowR7Q8GCMi_yVlwwmd2VXS7Of5G-AIlgXhU.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/3c/3cgrLc6or9vF2DjuWZgythpYtS_M_R2jfp3r6L1qNRQ.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/n8/n8JJfzG1hsUaRAfs85xZoz-SJ5rAaWMUlnpMJaQP4Fc.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/4y/4y8TEeVT04464BxgojbYIqVWGIIk1alK3zOGT7C0WLs.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/pG/pGjH-s3JSjRvPqsO5tRQBQlnvcuRsWTUC-sOg7EO2oA.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/5e/5ee5wYclJC04Xd-y1pZZh8Nxe0fevHDECoVqygbmecs.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/z0/z0S3H90yhYwc_nMc5ry5N7JG8DT6o_kJJjcPcz4FWQg.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/89/89FgoVFrqsC-dSpV1Qm5bIz5rx5S4IMKKT8sIvacxxU.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/xr/xra8LeuxjSEn9F2N_M8bMtX-iE1hf8pVxc6YPhWL1Hg.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/8O/8O_DHWzHZBHdFIKhHPIbI845YTkqLFiq089Eyi09oJo.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/yY/yY9l7jvzAOSq1vi2ALVMOrVDkQrgMkiKtk4TzJ_bdVk.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/9R/9RYRybmUz3mZCmonjwbdfK8Gi8vmhzaHOIDVxVR0aBI.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/9a/9aNtrpuq-WcqJV6YAsMe-_bemjM7iU1LorTc5QsRao4.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/r7/r7LkVhjZBhaDK3lfblgDg6WK3TbcFzcEnTofWg7ZqSE.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Bt/Bth9Ijii2g0kt_Xr7e-XWTUyChqKNXasiOU7zBcxqLU.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/QX/QXhlgzdpsfU6krhQwoPRtPNLkRBgPqG5f18vnAPEXB0.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/CJ/CJE1RFwu_Ejx9N35NleQrEe4uVmxJZNSe8X9JKXMh-E.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/zw/zw409xwZY51kfsqZvGRvg6ILBHvhvjV8IKZ5nQ_J-Mw.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Ck/CkukzQWLL0_lFPg1X0HYLJ0WLobdbwgnudPNO-FC1xw.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/pc/pcGQQfAY_s-eLjc0F_7wr80qX0gjx-2-CxnZH6MHRjA.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/D0/D0UFyLD-SF8MoXxlROZU7W8OjX7-B7SGMyDCvS0JUKg.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/nZ/nZFSJB3fp3CUe6rpafnYb5XflMYclxpdolAcWWui8rk.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/D2/D2RUILSx065OMSaU9xzfLlcX1VDvC9yRi7j9q7cKq7k.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/tG/tG4_ppW2Jd1tEyXOcVJLtZmZaYwCA0RHaqWwPYx6jLo.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/DJ/DJDJ1GHdJeAhXdwkuHaxPETqzDEtPbr6DQsiTimZ2ZM.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/FX/FXNeDBF230R8WzjQNarf6jVDhuG5ATJzk6eCxhQoFcM.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/vl/vlR4Hla5DzGZnU30PL-enmDt738L3C8XmW4_C6KCyv4.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Fz/Fz7YpM8w_joqO2iRGF3Mmyvft_7CSoQCaFlFQlgXkZw.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/qM/qMQukUCm3nQN6rM3gcyYRchHvKdJJ0A_x-97qAkahX0.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/GK/GK3kJXrQHD0BeM4HsK-8lKb-lg8CIC3lKO1KiRfxZ9M.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/vJ/vJ1dnjNfAgKy_VrjPppT_KgiZeIZutoghStbqdzohnY.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Ho/Ho3EEjtk5yM0uS0nnSKpYEolGob941bj94y6cO-KNns.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/Yt/YtTq7T7SboUzd0GvY1NXMvCyjDijhlthBLLt6y2OouE.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/I1/I18lzGkAiSIp-8yqjqnNL0qtYarPmvc33pGojUCWYK8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/ll/llDsc_ghQ2ox9ht4R_Ety2X6hfL8EyL_7ErGjlDXoz8.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Ip/IpLZviwC1AkEQjaMXXBX1C-33xXU4u7deF604RGznvQ.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/rD/rDL1yr0u_ce2ptvn75INRdbTcHag0hW-Ie1slDtde9o.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/Iw/IwDnP5esfo9kBWetDPoeuXn9HFlfg-Q37VdjkMCiuII.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/J1/J1KwOp0ETDsGqm8HJk4GMY1PSy-CxMH4TdwaEED-3v8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/wm/wm35hBZHWgjp8maZCV7EynVn-7eQy8FJLWqVaqxdXG8.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/KJ/KJHm3-OmQOBdzQvZr3CkQxqg9mtcqjt6ST_CvADBFjg.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/sa/sa9XkICet_BoEhP-t0YX1cH1z19lweIf1jYjAlGMT4Y.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/L4/L4wuA9E4YyzoUuSTYPTigqq04z_kSvQXWMOY4vBEfxQ.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/N3/N3DH5naHDSJQRuE7bdPjsKgaNtOeLKj-uzYnA9GNpMg.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/Nl/NlrHUWBAoXFIfdwZQfv8mdQ4ocjxidtjVht-alS4bmM.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/Ny/NyjBZHFO7awuOYzD9GOeTIAKMvLKV2ajvlRN9j31Ems.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/OP/OPuilFrQsfPE-LVVc8finijlkZq2e-aj1P4ktuYVG7s.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/v-/v-GRgNwKzjOW1G4ZxhYO0PCYiCqyxqJYNI8hrc8KZfs.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/OV/OVAPnktSWZAYtu857bCG7BfXGotPvBLCD-UATWMEXdI.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/x5/x5jxJNcKcLb0aOazDm6DSHXZXC0VztaJJRgJx-iQPWY.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Os/OstVwdXBpU2l4v_NFRE8JwtRZPSi0c34UHp-RwXAO3k.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/yN/yNkviHUk-sPVeK-mScxV9hI5xHYOe9oxMKp0UTDR_o0.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/P0/P0ia4s6c54Fdxc1UQMxs0insR5-I9A54N5IAFP1CbaQ.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/lt/ltGseVWtoAo05oCMpGzKHnVabWppAdoqm2URZVeWyCo.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/PO/POyzuGn4urKuicBNmQYl_qWepGd4vZX6c5Re70rRTW8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/z9/z9Gw0jnQtn-GSi1seEInZycTZR2scx-nPZrRbl4oQrM.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/Q9/Q91rM-exRoPOimZcGdXfRGWu5VR6aAh34xP4Pbf3-7A.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/QE/QEXfkGh3vXnsRiW1LUNR0Z9SNwWkGDi49Y_OFHoUmvo.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/eJ/eJGfrWlcQpX_KtcRj5hYYLv2dRcy2DpJLrbisAIIJ2s.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/QT/QTGfZTvW1q4EgMXI-Hb24y_hRaFJfhgmlPKdNxSGBxc.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/mO/mOy_tUZTvv6D9fGahGPhMh9EMGV3H8Fr6PwpQgvpE2o.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/Qw/Qw0CXT5_R36mnKP5AUzv_UvaeIxfctL59rcx--FOiT8.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/RB/RBD-IuCXVSpsnR5Xx_t3OGXH52tGqBq6vVCxKu3lD-c.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/u7/u7XTKMRcHeWVEYyLU1NHDrGrEv-j5Aw60PC31OcBgSc.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/RW/RWdJP_T5p09R7oG5dRHIcJFtUdBph50jHb9DyubL46U.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/SL/SLVLc7kHzFnZrXhF3hXktrE68J25obWmrtHoQ4ei4_s.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Sf/SfBtaEpSKqwXJE5QJshG0Zzhw-cnOV5STXBkPoLqD2c.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/g0/g0TC8RQ7LXTMYquFIXV9s5TDlWg1YnDTMIy0wEtUDq4.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/U5/U5gLqFCaLq9Op-hhAS26nrhAUyLHhYFAMJPMbFS7ZDc.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/wm/wmsgTIhiaeo22afEhb6rTbIa9rEDp2C5f7xLpic6mUk.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/U5/U5yniqQi37pEk2UOGXZtukd18pYjwvvakSJpLGXfHmE.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/vf/vfI3qApNnFbrZlCbckIB3ZpljJHLvpHM4l4cJBgR1rI.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Uq/UqnvUiVuJc5a5Jn3Ti-7D7--nSp-RjZVMW_2c0QVzZ8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/WA/WA04q1M-eDPvi6nKLTJAKzYsvBUafd9_M8tSgjmLjsE.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Uz/UzVB9r4iScVOnSXEJde1Vb3Mgqmbb1NN8TagyZu0gIk.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/lo/lo94VdTA2T9vCHRh5dEuK-4IZtTQ5dAatxmM26ed0ns.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/VX/VX7-oROuU_nglmhx17ZZR85QT6_64g0CLXGD5r9rWVE.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/x0/x0kJLb6-b7-wZSMKvctNBqrWTv4drgk3kRYWH4b9hNQ.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Vk/VkQfzUh8B_x2Mbuop543sJyBMJ5rKmEBMrK5JTx-yNg.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/u_/u_lSAQWfikPtqR3LTkjQEnGZJ-hNUUlx4RmpFYRl9yk.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/W7/W7isqTcektNjDEepuk-RqV8BTMGFw_snySwM8dx4kLY.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/o8/o8jD03AbdaQTAAZSvEUi8I7bgwkOg3q-nfLjBTxj9i4.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/WA/WAUn4suADVZes8nrk2ITMkUiPk33cALsgO60gYKBJtY.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/WV/WVBhsGcCpAxMkTqDZxSnPHKSA3O7VZPeumgSrL5kqlQ.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/i0/i0AHbTpo73B8fUI-Ehr4J5XADGiy46RKp7Z7S2iDMbo.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Xp/XpbTX2Pl_wrrbWMag79yR9g8UT0zYnBKhn0XJOAbvb8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/po/popgHTWh0EBoR2H5xL0mVGyx1S9ANV_F7ddmTYtArfo.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Xv/XvDIEMA1mRxr7haemicTF1_j-mFIU4k0ZGgStlC1kuw.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/jo/joNjw71DMKivgaMB52DB7ustVe-_9-q7whgQerBNvRs.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/Xw/XwCbynPcx3EdoU_GY_7Qs0n-O6PJMB_ENwH7yTQPzPE.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/Y0/Y0gYuNsnLE1_vEA1MoGWWOUzeYIwtYQptmvh8aHYrKc.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Y8/Y8WUaAEy2iIlaeuXO3wwIItVzeD25s5fmOG7ffcaYqU.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/dC/dCoXmqv8VNQuhhwLEwxvbs_ulecsdC7odSD_sO9nUtQ.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/YA/YAvjQ8iUB7Y5oG8QPqhJ5Ki0uIc7UAMs2wjER6sY8qo.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/p_/p_WWVQL_NNwIf0LZnq4cjDWBEA4_bgDzmarwOvOFdEM.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/_7/_78N66YLc9PUf7BIyBfuLoeJh7whFBC3V4lSPIB4OJM.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/je/je02O2GVG9hy2yfaApakmll_e4M9C_1RbvbxMJVkUis.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/_K/_KJjNjXi4ASVnP1pTfc4k_UhTmATDRkd3PHxFU7DuL8.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/_N/_N9mQ8Ymysust3r9jyoAQQxYWaRYVKvUOX1iRCUthgE.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/uE/uE_KS6e2bYWJ29yn9l4C-gp6TZUaFO3zNVITGteGU8c.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/_S/_S55-d_PFHcEm4Ya2KnrhcR0gS4nnVx424tpMww_fsA.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/xG/xGtDXQOyDCpSRNMlNdL8JstEYECHlUViziClbt_o5LA.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/_Y/_Yqrdir5VR2toNKKpPXekpAKlHqsb-5D5vllUcrv7G8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/wd/wdQLt12i5Vu3N7M8e50NabUpIkDPSA_sf0qGSXlk6RQ.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/aM/aMpIGZw1xiRRYv-L223bi9C6xbxQ7MQj0DBWLukLyk0.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/uM/uMtlkj5NwkwO9Zb7B9hLWqw-_OB_IdgkMaTpQoCkkMQ.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/aw/awUSOe5tQxigMCSa5Z-dBNQTVoBuR7bTAKu_r_n1n9Y.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/yI/yIgsg_V7fkHRZ3POD_CgZGQWZ2oURUKliQEf4gnV-vw.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/bO/bO2fz3Df95M2BvSZ5CRC02pI7Rdwjuh86Pex4SQ8gL8.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/bn/bnqa_vWUU262VEHpy8PhXgJAZjWAhQPAmYoTglc5bUE.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/tv/tv71xduM_9O2epfFVm3K56HsBsB1I1DKzGWs7YtYA_w.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/c1/c1oiKWa1nlumqwDMpo5twyg_fiAIGzzytn5VRTiAECY.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/z_/z_su9aqExZ5LvxQRQQ3R5B7h_mHjP3esvBd-tGaDCZM.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/dB/dBZt40m7TWyX79ro_NRoWoYbN_y4daAaxyUiWSSETeQ.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/r_/r_b4HdVMadthjU0VfuJk6kzuHWeoi6UfCx57rZzEkrw.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/di/diZDSrIVBC2kwXt2oIIv6AmbCK12i-cWmf46PgBnCZ4.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/r3/r3ozfS8pOeWMxL_CiqlqhT_wYHrX7rSlMXEJIyCHscE.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/eB/eB6ccdrDfasZoBRt-4mDJMCvEG28WMoqAF-dLDwlaz0.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/ZA/ZABEOAKtONcLgAP2C68GtRbFzo43zVC-W7OH4VS3470.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/eG/eGmZLV3VZcrwLkvX5ckFgRI6S0ihF8Cepfi9FdeiQHE.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/qj/qjJnZmw4AZIxUaCnriPdGUR71ghaqawrUvORzdFFI5k.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/h6/h6Mkte2bfhOocpPDT66Ti1BNUZFGGaWx7pJgWNb-xAs.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/hL/hL6P2P4X8iCF8X4s3X0w6uZB9I_qseNWMscUd9ONhKk.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/t3/t3LSxYlcXBoNgtIHkcTozNZVMmolYrsZjovvyfC-w78.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/hx/hxzUWg938utW0GIDyfmOZGgfP0npioDwwlcvDeE-ZbU.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/wP/wP9dyPjZ0Sg5jmt-P7mXBvIa4XIL9GgESJRDQ4YPQr0.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/jB/jBRFvCJ1u5yO7esVYYMHdUY48xh9m549KeKOl-FniIg.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/vp/vpap4G5U5IkfpCVIH6uIRELqJDdfCJQUNzGIoMl6J2E.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/jF/jFFTP-MHD_LBDTiYlPbmCXJEoM9Om1xLgXmIGqedoUc.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/vf/vfbkftfD1wJ44eiYLCpnB59TgvhRNMN7hNMsC6g1abU.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/k1/k1gfsa5tCVvFNhmQoYDUrZIkyN4TcCTB3ohj8a4IPtY.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/kh/kheTie6-32u0d5meUt6jcHT5JxJiew8lNtO078Jpb3w.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/lM/lMFOJTb3D3Gw-92YuuNBQ8o7nXAKpwNZPHDD7edSzfI.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/cB/cB-sjDJXLWmBdWR4UoSCum0zAQebKlWYPxeCGuYGroc.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/lT/lT3WOOWdHe5y6kAf0Ve3RhltYZ7CQVTdSY8vx4kck04.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/zc/zclb5S5gP7-KXcMtozLbePRyllfyQMEy354P4uJlXF4.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/ld/ldi7MaMbOhxWdFxMzlIXWOq-yGLwXyUqsys0TET4BuE.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/vO/vOMuUs3IN1Q9-QYXw5R8z8isIaA-Vb0neUFqgNISTJU.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/mA/mAtv19jq8cspVsUgW71kgIPzKOlqh28pW_g_-lJWMq0.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/mz/mzWaTRoDMClMTpfhnTPbg27mHa4oVZzoVJ8Wf9fTvGA.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/mV/mVl1TOu9ykiPUC4cPnTxIbQx3UsmQRQdDYIB-QWy66I.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/ms/ms9dJjHhWlCkrWaI5Bma3mKxMMoUBjv7havXuZyymts.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/mh/mhv8yFAZiep_aMPl8en77bySllt-SpzF38XOOmwMxXw.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/ut/utIbiiHLxFbfRtXP3XaG46V_I8wuBxakFWcVirDfKD0.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/mz/mzcEB9uA3ZgNs5vpWuFFtw_w0iRGm48EQaJORVoA_-0.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/nA/nA8bpHgMFegYMSmSQ9IqyiQcAlycY6PqZeh-m6Fc8Rs.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/wU/wUPFV17n9Kl12N00S9NIZuh8NuXK9Q7qDJeq-Akonnk.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/n_/n_F3DaGfG-2jxXFXWais___Q9N2TTj6245L2pAr7OOc.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/oe/oeD1tDnJIf05iu4yhnW7szqg_fmJedu68IfUn8IGJBM.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/np/npsgKFREXzC3OuyE1OoTvfLYLx-BOQIjbXOs7GXP1Ho.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/xn/xnCWNfdIyWYxFNyE0ImQaM1C_mlLOtO51Y-t26j1Rj0.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/oJ/oJSibi8X7AqsOB7UIctQC_T2UJ3WtOF917wQAFkwQUs.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/oW/oWiChaRzhcR0wNvebiLNrok2cFGUPqy9DZ80S4Q0DPg.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/z_/z_Ztg0pES-mt7CRbXluCsQSeCIqKDnmqPYSmWTKhihQ.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/pE/pE0wnrkW-enOJJOdIJtW2dIUVjgnMNnIj4BUBr6Llog.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/qN/qNgspESjV-OQ9Y0q7It2K1Ct40eXtZohRmvHXNJ423U.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/pg/pgutm3a0LRrz-p-F9v_kUoPapiLVH-wZ3gV_MmUcncw.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/rr/rr221HkDAXuh0OcVyGBF8_G3pTQhdTnYrZqqTY0_B6k.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/yU/yUYCvM_45BCYoXbnNc0RAAe-Xig-C7RnrdX64QPRsQ8.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/ru/ruM-Z996Fqrko0kNArpxqRareLGABbdIbznfaJOYta8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/ev/evu4UjFYB_q9fA-L1K6AgX1t1ZhezxKg2xtmgNFIj0I.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/rz/rzaYRI3rtopAVrN5ddiXSC3j3Uvs04l2V_rKxrMoBI8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/n8/n8V85frox-XOd8AKQil4ikNHUgZe55YDGYcIwmiEyDI.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/sM/sMfCM_qJ5XYwoCALL_vL5uBy0GEbqZAt9cS0ZWI1Ylw.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/iJ/iJzMNLvuypfi97UzK81fb_F-mq_1NcT_-SOwSZlX-bw.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/sQ/sQkNHU32JzYHH0L2Mz9CwlCvgRA-sAzgUql0x-977C8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/gc/gcggINOtygYNrMCF7q5lUlhcbJMDPhPljoo_yPr14X4.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/sj/sjeDfb6-W8E7a7SzO2Oau4HXYUK8cnUOMsonpbTm4iE.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/li/liLchR8d-swsL7fa-qbVVBGTp924pJoTdkcd5rSJZfo.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/te/te-dB8oHooVqITS6xWP_nj1jBmjC5j3zIckf6n18VPM.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/yQ/yQX2LXEaW2sw3CzVfdzad1-DAEDNH_Xz1xJ0PwhoAt0.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/u3/u3-B5NAjwm_V5yfbOsdzF-xY0Jk_6Xd89uKF--LFr9A.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/zu/zuYPeEUFM58mPlhDZ5mTZ470w3UIrn_Kh7Sl7mhUdtM.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/uA/uAsBFsafks7iQyi5OPHWEAkJehNB6B9c5Wlbvu9xSrk.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/tY/tYqhHqHP_91W7cICo_SwXrz8hvOc712g_tzGXAka5kg.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/uO/uOj93xxaAvFnM76v65gsARn-80QYVxpWKWwjYyn9N3w.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/uV/uVH4Cc0sjR0yYd78zwHV8TmfOHmslHZHKP8u_QAp8H0.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/d6/d6h7BTa57qLOjYIlTYeHFRhhTP0dPxdg47Me49iptPA.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/uV/uVq5C68QV06O4mQGYbj0WikrCqv_wnAD3vRMxpbDOAY.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/zw/zwhiB_F0kkBZRvu2pQonrhBGx6WHrENik-POxt7G9HI.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/uZ/uZ8r06itjPQ4uoNuzdQdpTlsR5tL6_DpVCQZlzJx4Cg.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/lm/lmA6TkUJJesRci00GajvBxJUAps5u525vMDvG-JbuKM.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/ub/ubGV-Dk2Z9q3UYplyW7TKuKGgzNu9DbfJPw6Fd8J6uo.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/y8/y8SumAZR22LVkqwC4BM8BhaHXy5D1h7qUc6bSyGSndY.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/ur/urZh84yhYm2YdL0cZ_nFN-pKPqrRRd5pN8y3ahYpLIo.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/qR/qR0pYAqQ9DyUh7F_iB3KcVmevP2Oi24Bt18buZcNYWk.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/x6/x6h1Z3sScX4WqZdowR51TcbyKQ3zLb2DrgrYmlxFibA.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/yF/yFvRGCn-IwZ-XYoVXxdnRArrR_q3DVXrbEZqbcX6s7E.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/mL/mLFHKKl9j9FBPkljU2GjDUeWZZahjOx6fkW5SFdDCCg.cache
+[END] Copying tmp/cache/assets/sprockets/v3.0/yX/yXJRsa6_Tdgty9x5rgBfUk6hEhglIg2EenoUcGHlwKU.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/yb/yb6B26sKDE5sg-h1KJnMMOWGn5Ku4oe1xv9DFzSOhkU.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/rh/rh8yxfzGW0nW1ME35MWBNyg6r4CwJaltrMTQo65lcUg.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/zQ/zQrhb0tuUr0U9EjpMdIwm34ezKiLN_FqR7uH0yr5QpQ.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/rc/rc9pXBhvGSWSeXmfgFxKSa114M5pR5gQj16NSAssNX8.cache
+[END] Updating file log/development.log
+[END] Copying tmp/cache/assets/sprockets/v3.0/-6
+[END] Copying tmp/cache/assets/sprockets/v3.0/0q
+[END] Copying tmp/cache/assets/sprockets/v3.0/0z
+[END] Copying tmp/cache/assets/sprockets/v3.0/1s
+[END] Copying tmp/cache/assets/sprockets/v3.0/2h
+[END] Copying tmp/cache/assets/sprockets/v3.0/3c
+[END] Copying tmp/cache/assets/sprockets/v3.0/4y
+[END] Copying tmp/cache/assets/sprockets/v3.0/5e
+[END] Copying tmp/cache/assets/sprockets/v3.0/89
+[END] Copying tmp/cache/assets/sprockets/v3.0/8O
+[END] Copying tmp/cache/assets/sprockets/v3.0/9a
+[END] Copying tmp/cache/assets/sprockets/v3.0/Bt
+[END] Copying tmp/cache/assets/sprockets/v3.0/CJ
+[END] Copying tmp/cache/assets/sprockets/v3.0/Ck
+[END] Copying tmp/cache/assets/sprockets/v3.0/D0
+[END] Copying tmp/cache/assets/sprockets/v3.0/D2
+[END] Copying tmp/cache/assets/sprockets/v3.0/FX
+[END] Copying tmp/cache/assets/sprockets/v3.0/Fz
+[END] Copying tmp/cache/assets/sprockets/v3.0/GK
+[END] Copying tmp/cache/assets/sprockets/v3.0/Ho
+[END] Copying tmp/cache/assets/sprockets/v3.0/I1
+[END] Copying tmp/cache/assets/sprockets/v3.0/Ip
+[END] Copying tmp/cache/assets/sprockets/v3.0/J1
+[END] Copying tmp/cache/assets/sprockets/v3.0/KJ
+[END] Copying tmp/cache/assets/sprockets/v3.0/OP
+[END] Copying tmp/cache/assets/sprockets/v3.0/OV
+[END] Copying tmp/cache/assets/sprockets/v3.0/Os
+[END] Copying tmp/cache/assets/sprockets/v3.0/P0
+[END] Copying tmp/cache/assets/sprockets/v3.0/PO
+[END] Copying tmp/cache/assets/sprockets/v3.0/QE
+[END] Copying tmp/cache/assets/sprockets/v3.0/QT
+[END] Copying tmp/cache/assets/sprockets/v3.0/RB
+[END] Copying tmp/cache/assets/sprockets/v3.0/Sf
+[END] Copying tmp/cache/assets/sprockets/v3.0/U5
+[END] Copying tmp/cache/assets/sprockets/v3.0/Uq
+[END] Copying tmp/cache/assets/sprockets/v3.0/Uz
+[END] Copying tmp/cache/assets/sprockets/v3.0/VX
+[END] Copying tmp/cache/assets/sprockets/v3.0/Vk
+[END] Copying tmp/cache/assets/sprockets/v3.0/W7
+[END] Copying tmp/cache/assets/sprockets/v3.0/WV
+[END] Copying tmp/cache/assets/sprockets/v3.0/Xp
+[END] Copying tmp/cache/assets/sprockets/v3.0/Xv
+[END] Copying tmp/cache/assets/sprockets/v3.0/Y8
+[END] Copying tmp/cache/assets/sprockets/v3.0/YA
+[END] Copying tmp/cache/assets/sprockets/v3.0/_7
+[END] Copying tmp/cache/assets/sprockets/v3.0/_N
+[END] Copying tmp/cache/assets/sprockets/v3.0/_S
+[END] Copying tmp/cache/assets/sprockets/v3.0/_Y
+[END] Copying tmp/cache/assets/sprockets/v3.0/aM
+[END] Copying tmp/cache/assets/sprockets/v3.0/aw
+[END] Copying tmp/cache/assets/sprockets/v3.0/bn
+[END] Copying tmp/cache/assets/sprockets/v3.0/c1
+[END] Copying tmp/cache/assets/sprockets/v3.0/dB
+[END] Copying tmp/cache/assets/sprockets/v3.0/di
+[END] Copying tmp/cache/assets/sprockets/v3.0/eB
+[END] Copying tmp/cache/assets/sprockets/v3.0/eG
+[END] Copying tmp/cache/assets/sprockets/v3.0/hL
+[END] Copying tmp/cache/assets/sprockets/v3.0/hx
+[END] Copying tmp/cache/assets/sprockets/v3.0/jB
+[END] Copying tmp/cache/assets/sprockets/v3.0/jF
+[END] Copying tmp/cache/assets/sprockets/v3.0/lM
+[END] Copying tmp/cache/assets/sprockets/v3.0/lT
+[END] Copying tmp/cache/assets/sprockets/v3.0/ld
+[END] Copying tmp/cache/assets/sprockets/v3.0/mA
+[END] Copying tmp/cache/assets/sprockets/v3.0/mV
+[END] Copying tmp/cache/assets/sprockets/v3.0/mh
+[END] Copying tmp/cache/assets/sprockets/v3.0/nA
+[END] Copying tmp/cache/assets/sprockets/v3.0/n_
+[END] Copying tmp/cache/assets/sprockets/v3.0/np
+[END] Copying tmp/cache/assets/sprockets/v3.0/oW
+[END] Copying tmp/cache/assets/sprockets/v3.0/qN
+[END] Copying tmp/cache/assets/sprockets/v3.0/rr
+[END] Copying tmp/cache/assets/sprockets/v3.0/ru
+[END] Copying tmp/cache/assets/sprockets/v3.0/rz
+[END] Copying tmp/cache/assets/sprockets/v3.0/sM
+[END] Copying tmp/cache/assets/sprockets/v3.0/sQ
+[END] Copying tmp/cache/assets/sprockets/v3.0/sj
+[END] Copying tmp/cache/assets/sprockets/v3.0/te
+[END] Copying tmp/cache/assets/sprockets/v3.0/u3
+[END] Copying tmp/cache/assets/sprockets/v3.0/uA
+[END] Copying tmp/cache/assets/sprockets/v3.0/uV
+[END] Copying tmp/cache/assets/sprockets/v3.0/uZ
+[END] Copying tmp/cache/assets/sprockets/v3.0/ub
+[END] Copying tmp/cache/assets/sprockets/v3.0/ur
+[END] Copying tmp/cache/assets/sprockets/v3.0/yF
+[END] Copying tmp/cache/assets/sprockets/v3.0/yb
+[END] Copying tmp/cache/assets/sprockets/v3.0/zQ
+UNISON 2.48.4 finished propagating changes at 22:00:39.23 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:00:39  (117 items transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:00:40.35 on 01 Nov 2017
+[BGN] Updating file log/development.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/AT from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Gr from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/XR from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/Xq from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/l7 from /home/owner/work/word_diary to //d71040be4856//app_sync
+[BGN] Copying tmp/cache/assets/sprockets/v3.0/w8 from /home/owner/work/word_diary to //d71040be4856//app_sync
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/AT/ATHGJqFlhaGY5YyUbsMbBi-H15Bi8cGOD4sPTzr4S8Y.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/xq/xqy6hdMRCrFOumjKielTINoFK-aWtU0oRcJ-QEQH9F4.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Gr/GruitLwAAzw5ivfZKqGmdSzR53tzzk2ePjhx2Eo5gHU.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/kf/kfjP4HQs-adqKXDo3fnVVPVFivGlge8P2irirmGo8Ws.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/XR/XR4-lxn5HzLzeseiKbc4rb6Vg5k-IsH92RP-CrsOEgM.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/pW/pWnDfDO-3zz-nKaVpLEErO4GMm9qxoYW4fL912nADlg.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/Xq/Xq-Ypt9kvaEerZsq5LSbsy75tlKyxTHCtD9CwbNUoVE.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/x4/x4iMJ7DShmFUl5euauzJA2LDVkJiwgl5JkNrcJBcuyM.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/l7/l7GOLVKGbB6v_rnU-YoYytnAEAtBTfSxYGtS4p_FkT8.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/wS/wS1p2GF-YNBHmum1d9pZdgtzcCCiRBGhNSWxLLuAHjg.cache
+Shortcut: copied /app_sync/tmp/cache/assets/sprockets/v3.0/w8/w8P_N2rHtrwaDUGelz0zkJaLkKTmjdkIyYSzYMxewdY.cache from local file /app_sync/tmp/cache/assets/sprockets/v3.0/xu/xuCNBvojeRefsaaOPF9n0qXtxqqBdjOxlutiEzyi_E4.cache
+[END] Updating file log/development.log
+[END] Copying tmp/cache/assets/sprockets/v3.0/AT
+[END] Copying tmp/cache/assets/sprockets/v3.0/Gr
+[END] Copying tmp/cache/assets/sprockets/v3.0/XR
+[END] Copying tmp/cache/assets/sprockets/v3.0/Xq
+[END] Copying tmp/cache/assets/sprockets/v3.0/l7
+[END] Copying tmp/cache/assets/sprockets/v3.0/w8
+UNISON 2.48.4 finished propagating changes at 22:00:40.36 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:00:40  (7 items transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:00:46.64 on 01 Nov 2017
+[BGN] Updating file log/development.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Updating file log/development.log
+UNISON 2.48.4 finished propagating changes at 22:00:46.65 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:00:46  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:01:51.57 on 01 Nov 2017
+[BGN] Updating file .docker-sync/daemon.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+Failed: The source file /home/owner/work/word_diary/.docker-sync/daemon.log
+has been modified during synchronization.  Transfer aborted.
+UNISON 2.48.4 finished propagating changes at 22:01:51.67 on 01 Nov 2017
+Saving synchronizer state
+Synchronization incomplete at 22:01:51  (0 items transferred, 0 skipped, 1 failed)
+  failed: .docker-sync/daemon.log
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:02:37.79 on 01 Nov 2017
+[BGN] Updating file log/development.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Updating file log/development.log
+UNISON 2.48.4 finished propagating changes at 22:02:37.80 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:02:37  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:03:43.94 on 01 Nov 2017
+[BGN] Updating file log/development.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Updating file log/development.log
+UNISON 2.48.4 finished propagating changes at 22:03:43.96 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:03:44  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:04:23.74 on 01 Nov 2017
+[BGN] Deleting tmp/pids/server.pid from //d71040be4856//app_sync
+[END] Deleting tmp/pids/server.pid
+UNISON 2.48.4 finished propagating changes at 22:04:23.75 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:04:23  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:04:32.81 on 01 Nov 2017
+[BGN] Updating file .docker-sync/daemon.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+Failed: The source file /home/owner/work/word_diary/.docker-sync/daemon.log
+has been modified during synchronization.  Transfer aborted.
+UNISON 2.48.4 finished propagating changes at 22:04:32.88 on 01 Nov 2017
+Saving synchronizer state
+Synchronization incomplete at 22:04:33  (0 items transferred, 0 skipped, 1 failed)
+  failed: .docker-sync/daemon.log
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:04:42.41 on 01 Nov 2017
+[BGN] Updating file log/development.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Updating file log/development.log
+UNISON 2.48.4 finished propagating changes at 22:04:42.41 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:04:42  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:04:45.56 on 01 Nov 2017
+[BGN] Copying tmp/pids/server.pid from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Copying tmp/pids/server.pid
+UNISON 2.48.4 finished propagating changes at 22:04:45.57 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:04:45  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:05:11.73 on 01 Nov 2017
+[BGN] Updating file log/development.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Updating file log/development.log
+UNISON 2.48.4 finished propagating changes at 22:05:11.75 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:05:11  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:06:56.53 on 01 Nov 2017
+[BGN] Updating file config/webpacker.yml from /home/owner/work/word_diary to //d71040be4856//app_sync
+Shortcut: copied /app_sync/config/webpacker.yml from local file /app_sync/config/webpacker (copy: conflict on 2017-10-15).yml
+[END] Updating file config/webpacker.yml
+UNISON 2.48.4 finished propagating changes at 22:06:56.56 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:06:56  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Propagating updates
+UNISON 2.48.4 started propagating changes at 22:06:59.72 on 01 Nov 2017
+[BGN] Updating file log/development.log from /home/owner/work/word_diary to //d71040be4856//app_sync
+[END] Updating file log/development.log
+UNISON 2.48.4 finished propagating changes at 22:06:59.74 on 01 Nov 2017
+Saving synchronizer state
+Synchronization complete at 22:06:59  (1 item transferred, 0 skipped, 0 failed)
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Looking for changes
+  Waiting for changes from server
+Reconciling changes
+Nothing to do: replicas have not changed since last sync.
+Fatal error: Lost connection with the server
