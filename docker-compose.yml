@@ -17,18 +17,18 @@ services:
       - "3000:3000"
     depends_on:
       - db
-      - webpacker
     volumes_from:
       - container:web-sync:rw
       - bundle
   webpacker:
     image: worddiary_web
-    command: bundle exec bin/webpack-dev-server
+    command: ./wait-for-it.sh web:3000 -- bundle exec bin/webpack-dev-server
     ports:
       - "8080:8080"
     volumes:
       - .:/word_diary
-
+    depends_on:
+      - web
 volumes:
   web-sync:
     external: true

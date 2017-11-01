@@ -4,7 +4,6 @@ RUN apt-get install -y imagemagick libmagickwand-dev
 
 RUN apt-get install -y nodejs npm
 RUN gem update bundler rake
-RUN bundle install
 RUN npm cache clean
 RUN npm install n -g
 RUN n stable
