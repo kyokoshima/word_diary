@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'hello_world', to: 'hello_world#index'
-  devise_for :users
-  devise_scope :user do
-    get :sign_in, to: 'devise/sessions#new'
-    delete :sign_out, to: 'devise/sessions#destroy'
-    get :sign_up, to: 'devise/registrations#new'
+  namespace :api do
+    mount_devise_token_auth_for 'User', at: 'auth', controllers: {
+        registrations: 'api/auth/registrations'
+    }
   end
+
+  get 'hello_world', to: 'hello_world#index'
   get :diaries, to: 'diaries#index', as: :user_root
   resources :users, param: :name do
     resources :diaries do
