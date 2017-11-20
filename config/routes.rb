@@ -4,7 +4,12 @@ Rails.application.routes.draw do
         registrations: 'api/auth/registrations'
     }
   end
-
+  devise_for :users
+  devise_scope :user do
+    get :sign_in, to: 'devise/sessions#new'
+    delete :sign_out, to: 'devise/sessions#destroy'
+    get :sign_up, to: 'devise/registrations#new'
+  end
   get 'hello_world', to: 'hello_world#index'
   get :diaries, to: 'diaries#index', as: :user_root
   resources :users, param: :name do
