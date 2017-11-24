@@ -19,7 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+# gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -50,7 +50,7 @@ group :development, :test do
 
 	gem 'tapp'
 	gem 'awesome_print'
-	gem 'annotate', git: 'git://github.com/ctran/annotate_models.git'
+	# gem 'annotate', git: 'git://github.com/ctran/annotate_models.git'
 	gem 'timecop'
 end
 
@@ -87,6 +87,11 @@ gem 'greensock-rails'
 gem 'devise'
 gem 'cancancan'
 gem 'resources_id_replace'
+
+gem "react_on_rails", "9.0.0"
+gem "webpacker", "~> 3.0"
+gem 'mini_racer', platforms: :ruby
+gem 'libv8'
 
 gem 'rails_12factor', group: :production
 ruby '2.4.0'

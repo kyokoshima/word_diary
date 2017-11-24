@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'hello_world', to: 'hello_world#index'
   devise_for :users
   devise_scope :user do
     get :sign_in, to: 'devise/sessions#new'

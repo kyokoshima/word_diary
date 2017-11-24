@@ -11,7 +11,7 @@ services:
     stdin_open: true
     build: .
     image: worddiary_web
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    command: ./init-rails.sh
     volumes:
       - .:/word_diary
     ports:
@@ -23,7 +23,7 @@ services:
       - bundle
   webpacker:
     image: worddiary_web
-    command: ./wait-for-it.sh web:3000 -t 180 -- bundle exec bin/webpack-dev-server
+    command: ./wait-for-it.sh web:3000 -t 180 -- ./init-webpacker.sh
     ports:
       - "8080:8080"
     volumes:
