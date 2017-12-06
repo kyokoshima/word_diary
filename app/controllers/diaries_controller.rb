@@ -1,7 +1,8 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
   protect_from_forgery except: :weather_mappings
-  load_and_authorize_resource
+  # load_and_authorize_resource
   # GET /diaries
   # GET /diaries.json
   def index
