@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
   has_many :diaries, dependent: :destroy
   validates :name, presence: true, uniqueness: true
+
+  mount_uploader :image, ImageUploader
 end
