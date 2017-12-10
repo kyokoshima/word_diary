@@ -1,25 +1,16 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
-  protect_from_forgery except: :weather_mappings
-  load_and_authorize_resource
+
   # GET /diaries
-  # GET /diaries.json
   def index
     @diaries = Diary.all
+    render json: @diaries
   end
 
   # GET /diaries/1
-  # GET /diaries/1.json
   def show
-  end
-
-  # GET /diaries/new
-  def new
-    if can? :manage, controller_name.classify
-      @diary = Diary.new
-    else
-      render text: 'forbidden', status: 403
-    end
+    render json: @diaries
   end
 
   def weather
@@ -30,54 +21,35 @@ class DiariesController < ApplicationController
     render json: Diary.weather_mappings
   end
 
-  # GET /diaries/1/edit
-  def edit
-  end
-
   # POST /diaries
-  # POST /diaries.json
   def create
     @diary = Diary.new(diary_params)
     @diary.user = current_user
 
-    respond_to do |format|
-      if @diary.save
-        format.html { redirect_to user_diaries_path(@diary.user), notice: 'Diary was successfully created.' }
-        format.json { render :show, status: :created, location: @diary }
-      else
-        format.html { render :new }
-        format.json { render json: @diary.errors, status: :unprocessable_entity }
-      end
+    if @diary.save
+      render json: @diary, status: :created, location: @diary 
+    else
+      render json: @diary.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /diaries/1
-  # PATCH/PUT /diaries/1.json
   def update
-    respond_to do |format|
-      if @diary.update(diary_params)
-        format.html { redirect_to user_diaries_path(current_user), notice: 'Diary was successfully updated.' }
-        format.json { render :show, status: :ok, location: @diary }
-      else
-        format.html { render :edit }
-        format.json { render json: @diary.errors, status: :unprocessable_entity }
-      end
+    if @diary.update(diary_params)
+      render json: @diary
+    else
+      render json: @diary.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /diaries/1
-  # DELETE /diaries/1.json
   def destroy
-    @diary.destroy
-    respond_to do |format|
-      format.html { redirect_to user_diaries_url(current_user), notice: 'Diary was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    @diary.destroy    
   end
 
   def top
-    redirect_to user_diaries_path(current_user) if user_signed_in?
-# render layout: 'top'
+    @diaries = Diary.all
+    render json: @diaries
   end
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -87,6 +59,6 @@ class DiariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def diary_params
-      params.require(:diary).permit(:word, :weather, :temperature,:post_date, :place, :show_weather, :show_temp, :show_date, :show_location, :weather_icon, :text_color, :image, :image_cache )
+      params.require(:diary).permit(:word, :weather, :temperature,:post_date, :place, :show_weather, :show_temp, :show_date, :show_location, :image)
     end
 end

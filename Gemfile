@@ -93,5 +93,8 @@ gem "webpacker", "~> 3.0"
 gem 'mini_racer', platforms: :ruby
 gem 'libv8'
 
+gem 'omniauth'
+gem 'devise_token_auth'
+
 gem 'rails_12factor', group: :production
 ruby '2.4.0'
