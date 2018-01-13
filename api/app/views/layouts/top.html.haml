@@ -1,0 +1,116 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta(name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no")
+    %title Word Diary
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %body
+    #barba-wrapper
+      .barba-container
+        %nav(role="navigation")
+          .nav-wrapper.container
+            %a#logo-container.brand-logo(href="#") Word Diary
+            %ul.left.hide-on-med-and-down
+              %li
+                %a Navbar Link
+            %a.right.button-collapse(data-activates="mobile-menu")
+              = m_icon :menu
+            = render 'diaries/shared/mobile_menu'
+        #index-banner.parallax-container.valign-wrapper
+          .section
+            .container
+              %h1.header.center.green-text.text-darken-4 Word Diary
+              .row.center
+                %h5.header.col.s12.light The most simplest diary in the world
+              .row.center
+                = link_to_no_barba 'Get Started', sign_in_path, class: ['btn-large','waves-effect','waves-light','teal']
+          .parallax
+            = image_tag 'top-bg.jpg'
+        .container
+          .section
+            .row
+              .col.s12.m4
+                .icon-block
+                  %h2.center.brown-text
+                    = m_icon :flash_on
+                  %h5.center Let's start do good habit.
+                  %p We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+              .col.s12.m4
+                .icon-block
+                  %h2.center.brown-text
+                    = m_icon :group
+                  %h5.center Easy to continue.
+                  %p By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
+              .col.s12.m4
+                .icon-block
+                  %h2.center.brown-text
+                    = m_icon :settings
+                  %h5.center Look back memories with
+                  %p We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+        .parallax-container.valign-wrapper
+          .section.no-pad-bot
+            .container
+              .row.center
+                %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
+          .parallax
+            = image_tag 'top-bg-2.jpg'
+        .container
+          .section
+            .row
+              .col.s12.center
+                %h3
+                %h4 Contact Us
+                %p.left-aligh.light
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+        .parallax-container.valign-wrapper
+          .section.no-pad-bot
+            .container
+              .row.center
+                %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
+          .parallax
+            = image_tag 'top-bg-3.jpg'
+        .page-footer.teal
+          .container
+            .row
+              .col.l6.s12
+                %h5 Company Bio
+              %p We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.
+              .col.l3.s12
+                %h5.white-text Settings
+                %ul
+                  %li
+                    %a.white-text{ :href => "" } Link 1
+                  %li
+                    %a.white-text{ :href => "" } Link 2
+                  %li
+                    %a.white-text{ :href => "" } Link 3
+                  %li
+                    %a.white-text{ :href => "" } Link 4
+              %div.col.l3.s12
+                %h5.white-text Connect
+                %ul
+                  %li
+                    %a.white-text{ :href => "" } Link 1
+                  %li
+                    %a.white-text{ :href => "" } Link 2
+                  %li
+                    %a.white-text{ :href => "" } Link 3
+                  %li
+                    %a.white-text{ :href => "" } Link 4
+          .footer-copyright
+            .container
+              Made By
+              %a.brown-text{ :href => "" } Materialize
+    = javascript_include_tag 'devise', 'data-tuebolinks-track': 'reload'
+    :javascript
+      (function($){
+        $(function(){
+          $('.parallax').parallax();
+          $('.button-collapse').sideNav({
+              menuWidth: 100,
+              edge: 'right',
+              draggable: true
+              });
+        });
+      })(jQuery); // end of jQuery name space

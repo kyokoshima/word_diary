@@ -1,0 +1,13 @@
+%p#notice= notice
+.row
+  .col.s12.m8.l6
+    .card
+      .card-image
+        = diary_image @diary, clz: :materialboxed
+      .card-content
+        %p
+          %strong Name:
+          = @diary.user.name
+
+= render layout: 'diaries/shared/mobile_menu' do
+  = link_to 'Edit', edit_user_diary_path(current_user, @diary)

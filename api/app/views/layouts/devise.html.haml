@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta(name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no")
+    %title WordDiary
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag '/css/genshin-font', media: :all
+  %body
+    #barba-wrapper
+      .barba-container
+        %header
+          %nav.top-nav
+            .container
+              .nav-wrapper
+                %ul.left
+                  %li 
+                      
+                %a.brand-logo W
+                %a.right.button-collapse(data-activates="mobile-menu")
+                  %i.material-icons menu
+                %ul.right.hide-in-med-and-down
+                  %li
+                    = yield(:title).presence || "Title"
+                #mobile-menu.side-nav
+                  = render 'diaries/shared/mobile_menu'
+        .container
+          = yield
+  = javascript_include_tag 'devise', 'data-turbolinks-track': 'reload'

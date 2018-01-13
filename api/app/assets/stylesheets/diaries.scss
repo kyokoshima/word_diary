@@ -1,0 +1,163 @@
+// Place all the styles related to the diaries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-nav {
+  margin-bottom: 10px;
+}
+
+@mixin place-container($font-size: 3rem) {
+	position: absolute;
+	bottom: 12%;
+	left: 10%;
+	width: 80%;
+	font-size: $font-size;
+	.place-container-inner {
+		position: relative;
+		#preview-place {
+		}
+	}
+}
+@mixin weather-container {
+	position: absolute;
+	left: 10%;
+	.weather-container-inner {
+		position: relative;
+		#preview-weather {
+		}
+	}
+}
+
+@mixin temp-container($font-size: 3rem) {
+	position: absolute;
+	left: 18%;
+	font-size: $font-size;
+	.temp-container-inner {
+		position: relative;
+		#preview-temp {
+		}
+	}
+}
+
+@mixin date-container($font-size: 3rem) {
+	position: absolute;
+	right: 10%;
+	font-size: $font-size;
+	.date-container-inner {
+		position: relative;
+		#preview-date {
+		}
+	}
+}
+
+@mixin word-container($font-size:10rem) {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: $font-size;
+	.word-container-inner {
+		position: relative;
+		left: -50%;
+		transform: translateY(-50%);
+		border: dashed gray 2px;
+		#preview-word {
+			white-space: nowrap;
+		}
+	}
+}
+@mixin preview-container {
+	position: relative;
+	width: 100%;
+  color: #fff;
+  text-shadow: #333 0 0 5px;
+  font-family: 'GenShinGothic-P-Bold', sans-serif;
+  .bottom-line {
+    bottom: 5%;
+  }
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+	.preview-container-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		.preview-container-content {
+			position: relative;
+			height: 100%;
+			.material-placeholder {
+				height: 100%;
+			}
+			img#preview { 
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.word-container {
+				@include word-container;
+			}
+			.place-container {
+				@include place-container;
+			}
+			.weather-container {
+				@include weather-container;
+			}
+			.temp-container {
+				@include temp-container;
+			}
+			.date-container {
+				@include date-container;
+			}
+		}
+	}
+}
+
+.word {
+	font-size: 3em;
+	width: 8em; 
+}
+
+.col.gallery-cell {
+  padding: 0;
+  .card {
+    margin: 0;
+  }
+}
+
+.preview-container {
+	@include preview-container;
+}
+@media #{$small-and-down} {
+	.preview-container {
+		.preview-container-inner {
+			.preview-container-content {
+				.place-container {
+					@include place-container($font-size: 1rem);
+				}
+				.word-container {
+					@include word-container($font-size: 4rem);
+				}
+				.weather-container {
+					@include weather-container;
+				}
+				.temp-container {
+					@include temp-container(1rem);
+				}
+				.date-container {
+					@include date-container(1rem);
+				}
+			}
+		}
+	}
+	#toast-container {
+		top: 0;
+		bottom: inherit;
+		.toast {
+			background-color: $tabby-toe;
+		}
+	}
+}
+
