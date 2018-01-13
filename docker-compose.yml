@@ -9,27 +9,24 @@ services:
   web:
     tty: true
     stdin_open: true
-    build: .
+    build: ./api
     image: worddiary_web
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
-    volumes:
-      - .:/word_diary
+    command: ./init-rails.sh
     ports:
       - "3000:3000"
     depends_on:
       - db
     volumes_from:
-      - container:web-sync:rw
       - bundle
-  webpacker:
-    image: worddiary_web
-    command: ./wait-for-it.sh web:3000 -t 180 -- bundle exec bin/webpack-dev-server
+  client:
+    build: ./client
+    image: worddiary_client
+    command: npm start
     ports:
       - "8080:8080"
     volumes:
-      - .:/word_diary
-    depends_on:
-      - web
+      - ./client:/client
+      - node_modules:/client/node_modules
+
 volumes:
-  web-sync:
-    external: true
+  node_modules:

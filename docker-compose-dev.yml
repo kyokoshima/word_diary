@@ -2,7 +2,7 @@ version: "2"
 services:
   web:
     volumes:
-      - web-sync:/word_d:nocopy # will be mounted on /word_d
+      - web-sync:/word_diary:nocopy # will be mounted on /word_diary
 
 # that the important thing
 volumes:
