@@ -1,34 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import { TextField, RaisedButton } from 'material-ui';
-import './App.css';
-import { RadioButton } from 'material-ui/RadioButton';
+import { BrowserRouter, Route } from 'react-router-dom'
+import Login from './Login';
+import Register from './Register';
+import Home from './Home';
+import NewDiary from './NewDiary';
 
-class App extends Component {
-  render() {
-    return (
-      <MuiThemeProvider>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">A Word Diary</h1>
-          </header>
-          <div>
+import './App.css';
+
+
+export default class App extends Component {
+    render() {
+        return (
+          <BrowserRouter>
             <div>
-             <TextField hintText="Email" />
+              <Route exact path='/' component={Login} />
+              <Route path="/home" component={Home} />
+              <Route path='/login' component={Login} />
+              <Route path='/register' component={Register} />
+              <Route path='/new' component={NewDiary} />
             </div>
-            <div>
-              <TextField hintText="Password" type="password" />
-            </div>
-            <div>
-              <RaisedButton label="Sign in" primary={true} />
-            </div>
-          </div>
-        </div>
-      </MuiThemeProvider>
-    );
-  }
+          </BrowserRouter>
+        );
+    }
 }
 
-export default App;
+const style = {
+  margin: 15,
+};
