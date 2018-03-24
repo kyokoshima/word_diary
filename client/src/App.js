@@ -5,7 +5,7 @@ import Register from './Register';
 import Home from './Home';
 import NewDiary from './NewDiary';
 
-import './App.css';
+import './css/App.scss';
 
 
 export default class App extends Component {

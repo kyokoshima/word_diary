@@ -52,8 +52,8 @@ render() {
     return (
       <div>
         <MuiThemeProvider>
-          <div>
-            <AppBar title="Login"/>
+          <div className="login-container">
+            <div className="logo">A Word Diary</div>
             <TextField
                 hintText="Enter your email"
                 floatingLabelText="Email"
@@ -68,14 +68,15 @@ render() {
             />
             <br/>
             <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
-         </div>
-         <div>
+            <div>
             Not registered yet, Register Now
             <br/>
             <Link to='/register'>
                 <RaisedButton label="Register" primary={true} style={style}/>
             </Link>
          </div>
+         </div>
+         
          </MuiThemeProvider>
       </div>
     );
