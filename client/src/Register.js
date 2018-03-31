@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
-import RaisedButton from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField';
+import { AppBar, Button, TextField } from 'material-ui';
 import axios from 'axios';
 import Constants from './Constants'
 
@@ -41,7 +38,6 @@ export default class Register extends Component {
     render() {
         return (
             <div>
-                <MuiThemeProvider>
                 <div>
                 <AppBar
                     title="Register"
@@ -66,9 +62,8 @@ export default class Register extends Component {
                     onChange = {(event,newValue) => this.setState({password:newValue})}
                     />
                 <br/>
-                <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+                <Button variant="raised" label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
                 </div>
-                </MuiThemeProvider>
             </div>
         );
     }

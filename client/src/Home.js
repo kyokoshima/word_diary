@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import DiaryList from './DiaryList'
-import FloatingActionButton from 'material-ui/FloatingActionButton'
+import Button from 'material-ui/Button'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Constants from './Constants'
@@ -89,13 +89,11 @@ export default class Home extends Component {
     if (this.state.isLoaded){
       return (
         <div>
-          <MuiThemeProvider>
             <AppBar title="Home"/>
             <DiaryList diaries={this.state.diaries} deleteDiary={this.deleteDiary.bind(this)}/>
             <Link to='/new'>
-              <FloatingActionButton/>
+              <Button variant="fab"/>
             </Link>
-          </MuiThemeProvider>
         </div>
       )
     }

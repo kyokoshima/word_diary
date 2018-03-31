@@ -4,26 +4,30 @@ import Login from './Login';
 import Register from './Register';
 import Home from './Home';
 import NewDiary from './NewDiary';
-
+import { MuiThemeProvider } from 'material-ui/styles';
+import  {CssBaseline} from 'material-ui';
+import { theme } from './assets/theme'
 import './css/App.scss';
 
 
 export default class App extends Component {
     render() {
         return (
-          <BrowserRouter>
-            <div>
-              <Route exact path='/' component={Login} />
-              <Route path="/home" component={Home} />
-              <Route path='/login' component={Login} />
-              <Route path='/register' component={Register} />
-              <Route path='/new' component={NewDiary} />
-            </div>
-          </BrowserRouter>
+          <MuiThemeProvider theme={theme}>
+            <CssBaseline>
+              <BrowserRouter>
+                <div>
+                <Route exact path='/' component={Login} />
+                <Route path="/home" component={Home} />
+                <Route path='/login' component={Login} />
+                <Route path='/register' component={Register} />
+                <Route path='/new' component={NewDiary} />
+                </div>
+            </BrowserRouter>
+            </CssBaseline>
+          </MuiThemeProvider>
+
         );
     }
 }
 
-const style = {
-  margin: 15,
-};

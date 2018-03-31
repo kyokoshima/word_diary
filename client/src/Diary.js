@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
+import { Button, Dialog } from 'material-ui';
 
 export default class Diary extends Component {
   constructor(props){
@@ -26,12 +24,12 @@ export default class Diary extends Component {
 
   render() {
     const actions = [
-      <FlatButton
+      <Button
         label="Cancel"
         primary={true}
         onClick={this.handleCancel}
       />,
-      <FlatButton
+      <Button
         label="Delete"
         primary={true}
         onClick={this.handleDelete}
@@ -51,8 +49,8 @@ export default class Diary extends Component {
         <br/>
         {this.props.word}
         <br/>
-        <RaisedButton label="Edit" primary={true} style={style}/>
-        <RaisedButton 
+        <Button variant="raised"label="Edit" primary={true} style={style}/>
+        <Button variant="raised"
           label="Delete"
           primary={true}
           style={style}

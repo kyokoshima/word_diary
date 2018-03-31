@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
-import TextField from 'material-ui/TextField';
+import { AppBar, Button, TextField} from 'material-ui/AppBar';
 import axios from 'axios';
 import Constants from './Constants'
 
@@ -65,19 +62,16 @@ export default class NewDiary extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
+      <div>
         <AppBar title="New Diary"/>
         <div>
-          <RaisedButton
-            labelPosition="before"
-            containerElement="label"
-          >
+          <Button variant="raised" labelPosition="before" containerElement="label">
             <input 
               type="file"
               accept=".jpg,.gif,.png,image/gif,image/jpeg,image/png"
               onChange={e => this.handleSelectFile(e)}
             />
-          </RaisedButton>
+          </Button>
           <br/>
           <TextField
                 hintText="Enter a word"
@@ -85,9 +79,9 @@ export default class NewDiary extends Component {
                 onChange = {(event,newValue) => this.setState({word:newValue})}
             />
           <br/>
-          <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleSubmit(event)}/>
+          <Button variant="raised" label="Submit" primary={true} style={style} onClick={(event) => this.handleSubmit(event)}/>
         </div>
-      </MuiThemeProvider>
+        </div>
     );
   }
 }
