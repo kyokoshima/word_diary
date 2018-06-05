@@ -26,7 +26,7 @@ services:
       - "8080:8080"
     volumes:
       - ./client:/client
-      - node_modules:/client/node_modules
+      - /client/node_modules
 
 volumes:
   node_modules:
