@@ -1,58 +1,57 @@
 import React, { Component } from 'react';
-import Button from 'material-ui/Button';
-import TextField from 'material-ui/TextField';
+import { Button, TextField } from '@material-ui/core';
 
 export default class NewDiary extends Component {
-    constructor(props){
-        super(props);
+  constructor(props){
+      super(props);
 
-        this.state = {
-            word: '',
-            file:[]
-        };
-    }
+      this.state = {
+          word: '',
+          file:[]
+      };
+  }
 
-    handleSelectFile = (e) => {
-        var files = e.target.files;
-        this.setState({file: files[0]});
-    }
+  handleSelectFile = (e) => {
+      var files = e.target.files;
+      this.setState({file: files[0]});
+  }
 
-    handleChange = (e) => {
-        const { name, value } = e.target;
-        this.setState({ [name]: value });
-    }
+  handleChange = (e) => {
+      const { name, value } = e.target;
+      this.setState({ [name]: value });
+  }
 
-    handleSubmit = (e) => {
-        this.props.onAddClick(this.state.word, this.state.file);
-    }
+  handleSubmit = (e) => {
+      this.props.onAddClick(this.state.word, this.state.file);
+  }
 
-    render() {
-        return (
-            <div>
-                <div>
-                    <Button>
-                        <input 
-                            type="file"
-                            accept=".jpg,.gif,.png,image/gif,image/jpeg,image/png"
-                            onChange={e => this.handleSelectFile(e)}
-                        />
-                    </Button>
-                </div>
-                <div>
-                    <TextField
-                            name='word'
-                            onChange = {this.handleChange}
-                        />
-                </div>
-                
-                <Button 
-                    variant="outlined" color="primary"
-                    label="Submit" primary={true} style={style} onClick={(event) => this.handleSubmit(event)}>
-                    Post
-                </Button>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <div>
+          <Button>
+              <input 
+                  type="file"
+                  accept=".jpg,.gif,.png,image/gif,image/jpeg,image/png"
+                  onChange={e => this.handleSelectFile(e)}
+              />
+          </Button>
+        </div>
+        <div>
+          <TextField
+                  name='word'
+                  onChange = {this.handleChange}
+              />
+        </div>
+        
+        <Button 
+            variant="outlined" color="primary"
+            label="Submit" primary={true} style={style} onClick={(event) => this.handleSubmit(event)}>
+            Post
+        </Button>
+      </div>
+    );
+  }
 }
 
 const style = {

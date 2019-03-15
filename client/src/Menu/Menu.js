@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Drawer from 'material-ui/Drawer';
-import List, { ListItem, ListItemText } from 'material-ui/List';
+import { List, ListItem, ListItemText, Drawer } from '@material-ui/core';
 import { history } from '../_helpers';
 
 class Menu extends React.Component {
@@ -17,7 +16,7 @@ class Menu extends React.Component {
         ];
 
         return (
-            <Drawer variant="permanent">
+            <Drawer>
                 <List style={{width:240}}>
                     {items.map(item => (
                         <ListItem

@@ -1,6 +1,6 @@
 import React from 'react';
-import Card, { CardHeader, CardMedia, CardActions } from 'material-ui/Card';
-import Button from 'material-ui/Button';
+import Card, { CardHeader, CardMedia, CardActions } from '@material-ui/core/Card';
+import Button from '@material-ui/core/Button';
 
 class Diary extends React.Component {
     handleDeleteClick = () => {
