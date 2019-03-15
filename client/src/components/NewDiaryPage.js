@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, TextField } from '@material-ui/core';
 
-export default class NewDiary extends Component {
+export class NewDiaryPage extends Component {
   constructor(props){
       super(props);
 

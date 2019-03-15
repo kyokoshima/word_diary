@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+
 
 import { userActions } from '../_actions';
 import { Avatar, Button, FormControl, FormControlLabel, Checkbox, Input, InputLabel, Paper, Typography } from '@material-ui/core';
@@ -27,7 +26,7 @@ const styles = theme => ({
   }
 });
 
-class LoginPage extends React.Component {
+export class LoginPage extends React.Component {
   
     constructor(props) {
         super(props);
@@ -94,12 +93,3 @@ class LoginPage extends React.Component {
     }
 }
 
-function mapStateToProps(state) {
-    const { loggingIn } = state.authentication;
-    return {
-        loggingIn
-    };
-}
-
-const connectedLoginPage = connect(mapStateToProps)(LoginPage);
-export { connectedLoginPage as LoginPage }; 

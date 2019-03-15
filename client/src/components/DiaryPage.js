@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Grid, GridList, GridListTile, Fab } from '@material-ui/core';
+import { Add } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
+import AppContainer from '../AppContainer';
 
 export class DiaryPage extends Component {
   constructor(props) {
@@ -9,6 +12,7 @@ export class DiaryPage extends Component {
       photos: []
     }
     this.requestData.bind(this);
+    this.handleClickFab.bind(this);
   }
   requestData = () => {
     axios.get('/photos', {
@@ -26,20 +30,29 @@ export class DiaryPage extends Component {
   componentDidMount() {
     this.requestData();
   }
+  handleClickFab(e) {
+    console.log(this.props);
+  }
   render() {
     return (
-      <Grid container justify='center' alignItems='center'>
-        <Grid lg={6}>
-          <GridList cols={3}>
-            {this.state.photos.map(photo =>
-              <GridListTile key={photo.id}>
-                <img src={photo.url} />
-              </GridListTile>
-            )}
-          </GridList>
+      <div>
+        <Grid container justify='center' alignItems='center'>
+          <Grid lg={6}>
+            <GridList cols={3}>
+              {this.state.photos.map(photo =>
+                <GridListTile key={photo.id}>
+                  <img src={photo.url} />
+                </GridListTile>
+              )}
+            </GridList>
+          </Grid>
+          <Fab style={{bottom: 20, right: 20, position: 'fixed'}} onClick={this.handleClickFab}>
+            <Link to="/diary/new">
+              <Add />
+            </Link>
+          </Fab>
         </Grid>
-        <Fab />
-      </Grid>
+      </div>
     );
   }
 }
